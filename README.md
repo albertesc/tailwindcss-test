@@ -1,4 +1,4 @@
-# @Tailwindcss La Teva Web
+# @Tailwindcss
 
 ---
 
