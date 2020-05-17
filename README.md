@@ -21,7 +21,7 @@ Necesitaras instalar node.js para el correcto funcionamiento de este repositorio
 Clona este proyecto con el siguiente comando
 
 ```bash
-git clone https://gitlab.com/la-teva-web/front/tailwindcss.git
+git clone https://github.com/albertesc/tailwindcss-boilerplate.git
 ```
 
 Acceder a la ruta del proyecto
