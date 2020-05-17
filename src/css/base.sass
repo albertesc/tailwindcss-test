@@ -1,0 +1,126 @@
+/*  Tailwind base styles
+	*/
+
+html
+	@apply antialiased text-base
+
+body
+	@apply bg-gray-200 font-body text-gray-800 leading-normal
+
+footer
+	@apply bg-gray-200
+
+
+/*  Text styles
+	*/
+
+h1, h2, h3, h4
+	@apply font-heading
+
+h1
+	@apply text-5xl mb-8 leading-tight
+
+h2
+	@apply text-4xl my-4 leading-snug
+
+h3
+	@apply text-2xl mt-4 mb-2 leading-snug
+
+h4
+	@apply text-lg mt-3 mb-2 leading-normal
+
+p
+	@apply text-base mb-3 leading-relaxed
+
+a
+	@apply text-primary-500 underline leading-none no-underline
+
+a:hover
+	@apply text-primary-700
+
+small
+	@apply text-xs inline-block
+
+b, strong
+	@apply font-bold
+
+em
+	@apply italic
+
+blockquote
+	@apply text-lg font-bold mb-3
+
+
+/*  List Styles
+	*/
+
+ul
+	@apply list-disc mb-3 pl-8
+
+ol
+	@apply list-decimal mb-3 pl-8
+
+ul ul, ol ol, ul ol, ol ul
+	@apply my-0
+
+li
+	@apply text-base leading-relaxed
+
+
+/*  Forms styles
+	*/
+
+// input
+// -----------------------
+input
+	@apply inline-block border rounded text-base px-4 py-2 outline-none
+
+input::placeholder
+	@apply text-gray-400
+
+input:focus::placeholder
+	@apply text-gray-200
+
+// input errors
+input.error
+	@apply border-red-300 bg-red-50 text-red-900
+
+input.error::placeholder
+	@apply text-red-300
+
+input.error:focus::placeholder
+	@apply text-red-300
+
+// textarea
+// -----------------------
+textarea
+	@apply inline-block border rounded text-base px-4 py-2 outline-none
+
+textarea::placeholder
+	@apply text-gray-400
+
+textarea:focus::placeholder
+	@apply text-gray-200
+
+// textarea errors
+// -----------------------
+textarea.error
+	@apply border-red-300 bg-red-50 text-red-900
+
+textarea.error::placeholder
+	@apply text-red-300
+
+textarea.error:focus::placeholder
+	@apply text-red-300
+
+// select
+// -----------------------
+select
+	@apply appearance-none inline-block border rounded text-base px-4 py-2 outline-none bg-no-repeat bg-right
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 24' fill='%23BBBBBB' width='30' height='24'%3E%3Cpath class='heroicon-ui' d='M15.3 9.3a1 1 0 0 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 1.4-1.4l3.3 3.29 3.3-3.3z'/%3E%3C/svg%3E%0A")
+	// Poner aquí ☝️ el icono del input tipo select en formato svg. Puedes crear la url en la página https://yoksel.github.io/url-encoder/
+
+// label
+// -----------------------
+label
+	@apply block text-gray-600 text-xs font-medium uppercase leading-relaxed

@@ -1,0 +1,1623 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>@LTW Tailwindcss UI</title>
+    <link rel="stylesheet" href="css/app.css">
+
+    <style>
+        #menu {
+            left: -100%;
+            transition: all 0.5s ease-in-out;
+        }
+        #menu.open {
+            left: 0;
+        }
+        #upButton {
+            opacity: 0;
+        }
+        #upButton.active {
+            opacity: 1;
+        }
+
+        #element {
+            display: none;
+        }
+        #element.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="fixed top-0 left-0 max-w-xs w-full h-screen overflow-y-scroll bg-primary-900 z-50" id="menu">
+            <div class="flex justify-end">
+                <svg class="text-white w-6 h-6 mt-4 mr-4 cursor-pointer" data-toggle="menu" id="menuClose" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M2 30 L30 2 M30 30 L2 2" />
+                </svg>
+            </div>
+        </nav>
+
+        <nav class="fixed top-0 left-0 w-full bg-gray-800 z-20">
+            <div class="container mx-auto px-8">
+                <div class="flex justify-between h-16">
+                    <div class="flex items-center">
+                        <span class="pr-3">
+                            <svg class="text-white w-6 h-6 cursor-pointer" data-toggle="menu" id="menuOpen" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M4 8 L28 8 M4 16 L28 16 M4 24 L28 24" />
+                            </svg>
+                        </span>
+                        <a href="#fonts"
+                            class="anchor ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">
+                            Type
+                        </a>
+                        <a href="#buttons"
+                            class="anchor ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">
+                            Buttons
+                        </a>
+                        <a href="#forms"
+                            class="anchor ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">
+                            Forms
+                        </a>
+                        <a href="#icons"
+                            class="anchor ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">
+                            Icons
+                        </a>
+                        <a href="#collapse"
+                            class="anchor ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">
+                            Collapse
+                        </a>
+                        <a href="#accordion"
+                            class="anchor ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">
+                            Accordion
+                        </a>
+                        <a href="#sections"
+                            class="anchor ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">
+                            Sections
+                        </a>
+                        <a href="#lists"
+                            class="anchor ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">
+                            Lists
+                        </a>
+                    </div>
+                    <div class="flex items-center">
+                        <a href="" class="ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">
+                            Documentation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- TYPE / FONTS / TIPOS / TIPOGRAFIA -->
+    <!-- ---------------------------------------------- -->
+    <section class="pt-20 pb-8" id="fonts">
+        <div class="container mx-auto px-8">
+            <h2 class="mb-12 text-lg text-gray-600 font-medium uppercase">@LTW Tailwindcss UI</h2>
+
+            <div class="flex flex-wrap">
+                <div class="w-full md:w-1/2 md:pr-6">
+                    <small class="block text-gray-600">Heading h1</small>
+                    <h1>The spectacle before us was indeed sublime.</h1>
+
+                    <small class="block text-gray-600">Heading h2</small>
+                    <h2>The spectacle before us was indeed sublime.</h2>
+
+                    <small class="block text-gray-600">Heading h3</small>
+                    <h3>The spectacle before us was indeed sublime. us was indeed sublime.</h3>
+
+                    <small class="block text-gray-600">Heading h4</small>
+                    <h4>The spectacle before us was indeed sublime.</h4>
+                </div>
+
+                <div class="w-full md:w-1/2 md:pl-6">
+                    <small class="block text-gray-600">Paragraph</small>
+
+                    <h1>Kitsch retro</h1>
+
+                    <h2>Typewriter delectus cred</h2>
+                    <p>Bushwick Schlitz. Est Shoreditch small batch, dolor Schlitz sapiente twee stumptown ex. Duis
+                        Carles pickled, cornhole Thundercats McSweeney's minim PBR vegan Tumblr irony. Kogi eu
+                        Thundercats, sed scenester before they sold out et aesthetic. Elit cred Vice ethical pickled
+                        sartorial. Stumptown roof party freegan High Life vero, ea sed minim meggings.</p>
+
+                    <h3>Truffaut disrupt sartorial deserunt</h3>
+                    <p>Cosby sweater plaid shabby chic kitsch pour-over ex. Try-hard fanny pack mumblecore cornhole cray
+                        scenester. Assumenda narwhal occupy, <strong>Blue Bottle nihil culpa fingerstache.</strong>
+                        Meggings kogi vinyl
+                        meh, food truck banh mi Etsy magna 90's duis typewriter banjo organic leggings Vice.</p>
+
+                    <h4>Fingerstache nesciunt lomo nostrud hoodie</h4>
+
+                    <ul>
+                        <li>Roof party put a bird on it incididunt sed umami craft beer cred.</li>
+                        <li>Carles literally normcore, Williamsburg Echo Park fingerstache photo booth twee keffiyeh
+                            chambray whatever.</li>
+                        <li>Scenester High Life Banksy, proident master cleanse tousled squid sriracha ad chillwave
+                            post-ironic retro.</li>
+                    </ul>
+
+                    <p>Laboris selfies occaecat umami, forage Tumblr American Apparel. Retro Terry Richardson culpa id
+                        swag polaroid Intelligentsia American Apparel eu, esse non post-ironic fugiat master cleanse.
+                        Direct trade gluten-free blog, fanny pack cray labore skateboard before they sold out
+                        adipisicing non magna id Helvetica freegan. <a href="#">Disrupt aliqua</a> Brooklyn church-key
+                        lo-fi
+                        dreamcatcher.</p>
+
+                    <small class="block text-gray-600">Blockquote</small>
+
+                    <blockquote class="blockquote">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Nam dui
+                        enim.
+                    </blockquote>
+
+                    <small class="block text-gray-600">Label</small>
+
+                    <label>Lorem ipsum dolor sit</label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BUTTONS / BOTONES -->
+    <!-- ---------------------------------------------- -->
+    <section class="py-8" id="buttons">
+        <div class="container mx-auto px-8">
+            <h2 class="text-lg text-gray-600 font-medium uppercase">Buttons</h2>
+            <div class="flex flex-wrap -mx-4">
+                <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 px-4 mb-6">
+                    <small class="block text-gray-600 mb-2">Button primary</small>
+                    <a href="#" class="button-primary">Primary</a>
+                </div>
+                <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 px-4 mb-6">
+                    <small class="block text-gray-600 mb-2">Button ghost</small>
+                    <a href="#" class="button-ghost">Ghost</a>
+                </div>
+                <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 px-4 mb-6">
+                    <small class="block text-gray-600 mb-2">Button small</small>
+                    <a href="#" class="button-primary button-sm">Primary sm</a>
+                </div>
+                <div class="w-full sm:w-1/2 md:w-1/3 lg:w-1/5 px-4 mb-6">
+                    <small class="block text-gray-600 mb-2">Button link</small>
+                    <a href="#" class="btn button-link">Link</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMS / FORMULARIOS / CONTACTO -->
+    <!-- ---------------------------------------------- -->
+    <section class="py-8" id="forms">
+        <div class="container mx-auto px-8">
+            <h2 class="text-lg text-gray-600 font-medium uppercase">Forms</h2>
+            <form action="javascript:void()" id="form">
+                <div class="flex flex-wrap">
+                    <div class="w-full md:w-1/2 md:pr-6">
+                        <div class="border-t border-gray-200">
+                            <div>
+                                <h3 class="text-lg leading-6 font-medium text-gray-900">
+                                    Personal Information
+                                </h3>
+                                <p class="mt-1 text-sm leading-5 text-gray-500">
+                                    Use a permanent address where you can receive mail.
+                                </p>
+                            </div>
+                            <div class="mt-6 grid grid-cols-1 row-gap-6 col-gap-4 sm:grid-cols-6">
+                                <div class="sm:col-span-3" class="input-group">
+                                    <label for="name">First Name</label>
+                                    <div class="relative">
+                                        <input type="text" class="w-full" id="name" placeholder="Enter Name">
+                                            <div class="hidden absoluåte inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                                            <svg class="h-5 w-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <p class="errorMsg hidden mt-2 mb-0 text-sm text-red-600">This input is required.</p>
+                                </div>
+
+                                <div class="sm:col-span-3" class="input-group">
+                                    <div class="relative">
+                                        <label for="last">Last Name</label>
+                                        <input type="text" class="w-full" id="last" placeholder="Last Name">
+                                        <div class="hidden absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                                            <svg class="h-5 w-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <p class="errorMsg hidden mt-2 mb-0 text-sm text-red-600">This input is required.</p>
+                                </div>
+
+                                <div class="sm:col-span-4" class="input-group">
+                                    <label for="email">Email</label>
+                                    <div class="releative">
+                                        <input type="email" class="w-full" id="email" placeholder="Enter email">
+                                        <div class="hidden absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                                            <svg class="h-5 w-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+                                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <p class="errorMsg hidden mt-2 mb-0 text-sm text-red-600">This input is required.</p>
+                                </div>
+
+                                <div class="sm:col-span-3">
+                                    <label for="country">
+                                        Country / Region
+                                    </label>
+                                    <select id="country" class="w-full">
+                                        <option>United States</option>
+                                        <option>Canada</option>
+                                        <option>Mexico</option>
+                                    </select>
+                                </div>
+
+                                <div class="sm:col-span-6">
+                                    <label for="Name">Street address</label>
+                                    <input type="text" class="w-full" id="Name" placeholder="Street address">
+                                </div>
+
+                                <div class="sm:col-span-2">
+                                    <label for="City">City</label>
+                                    <input type="text" class="w-full" id="City" aria-describedby="emailHelp"
+                                        placeholder="Enter City">
+                                </div>
+
+                                <div class="sm:col-span-2">
+                                    <label for="State">State / Province</label>
+                                    <input type="text" class="w-full" id="State" aria-describedby="emailHelp"
+                                        placeholder="Enter State">
+                                </div>
+
+                                <div class="sm:col-span-2">
+                                    <label for="ZIP">ZIP / Postal</label>
+                                    <input type="text" class="w-full" id="ZIP" aria-describedby="emailHelp"
+                                        placeholder="Enter ZIP">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2 md:pl-6">
+                        <div class="border-t border-gray-200">
+                            <div>
+                                <h3 class="text-lg leading-6 font-medium text-gray-900">
+                                    Notifications
+                                </h3>
+                                <p class="mt-1 text-sm leading-5 text-gray-500">
+                                    We'll always let you know about important changes, but you pick what else you want
+                                    to hear about.
+                                </p>
+                            </div>
+                            <div class="mt-6">
+                                <fieldset>
+                                    <legend class="text-base font-medium text-gray-900">
+                                        By Email
+                                    </legend>
+                                    <div class="mt-4">
+                                        <div class="relative flex items-start">
+                                            <div class="absolute flex items-center h-5">
+                                                <input id="comments" type="checkbox"
+                                                    class="form-checkbox h-4 w-4 text-primary-600 transition duration-150 ease-in-out" />
+                                            </div>
+                                            <div class="pl-7 leading-5">
+                                                <label for="comments">Comments</label>
+                                                <p class="text-gray-500">Get notified when someones posts a comment on a
+                                                    posting.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="mt-4">
+                                            <div class="relative flex items-start">
+                                                <div class="absolute flex items-center h-5">
+                                                    <input id="candidates" type="checkbox"
+                                                        class="form-checkbox h-4 w-4 text-primary-600 transition duration-150 ease-in-out" />
+                                                </div>
+                                                <div class="pl-7 leading-5">
+                                                    <label for="candidates">Candidates</label>
+                                                    <p class="text-gray-500">Get notified when a candidate applies for a
+                                                        job.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mt-4">
+                                            <div class="relative flex items-start">
+                                                <div class="absolute flex items-center h-5">
+                                                    <input id="offers" type="checkbox"
+                                                        class="form-checkbox h-4 w-4 text-primary-600 transition duration-150 ease-in-out" />
+                                                </div>
+                                                <div class="pl-7 leading-5">
+                                                    <label for="offers">Offers</label>
+                                                    <p class="text-gray-500">Get notified when a candidate accepts or
+                                                        rejects an offer.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="mt-6">
+                                    <legend class="text-base font-medium text-gray-900">
+                                        Push Notifications
+                                    </legend>
+                                    <p class="text-sm leading-5 text-gray-500">
+                                        These are delivered via SMS to your mobile phone.
+                                    </p>
+                                    <div class="mt-4">
+                                        <div class="flex items-center">
+                                            <input id="push_everything" name="form-input push_notifications"
+                                                type="radio"
+                                                class="form-radio h-4 w-4 text-primary-600 transition duration-150 ease-in-out" />
+                                            <label for="push_everything" class="ml-3">
+                                                <span class="block normal-case text-base font-normal">Everything</span>
+                                            </label>
+                                        </div>
+                                        <div class="mt-4 flex items-center">
+                                            <input id="push_email" name="form-input push_notifications" type="radio"
+                                                class="form-radio h-4 w-4 text-primary-600 transition duration-150 ease-in-out" />
+                                            <label for="push_email" class="ml-3">
+                                                <span class="block normal-case text-base font-normal">Same as
+                                                    email</span>
+                                            </label>
+                                        </div>
+                                        <div class="mt-4 flex items-center">
+                                            <input id="push_nothing" name="form-input push_notifications" type="radio"
+                                                class="form-radio h-4 w-4 text-primary-600 transition duration-150 ease-in-out" />
+                                            <label for="push_nothing" class="ml-3">
+                                                <span class="block normal-case text-base font-normal">No push
+                                                    notifications</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 border-t border-gray-200 pt-5">
+                    <div class="flex items-center justify-end">
+                        <a href="#" class="button-ghost">Cancel</a>
+                        <a href="#" id="sendBtn" class="button-primary ml-5 cursor-pointer">Save</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- ICONS / ICONOS -->
+    <!-- ---------------------------------------------- -->
+    <section class="pt-8" id="icons">
+        <div class="container mx-auto px-8">
+
+            <h2 class="text-lg text-gray-600 font-medium uppercase">Icons styles</h2>
+
+            <small class="mb-3">Icons</small>
+            <div class="flex flex-wrap -mx-2">
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 search" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="14" cy="14" r="12" />
+                    <path d="M23 23 L30 30" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 close" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M2 30 L30 2 M30 30 L2 2" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 plus" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M16 2 L16 30 M2 16 L30 16" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 minus" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M2 16 L30 16" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 play" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M10 2 L10 30 24 16 Z" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 pause" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M23 2 L23 30 M9 2 L9 30" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 backwards" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M16 2 L2 16 16 30 16 16 30 30 30 2 16 16 Z" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 forwards" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M16 2 L30 16 16 30 16 16 2 30 2 2 16 16 Z" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 move" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M3 16 L29 16 M16 3 L16 29 M12 7 L16 3 20 7 M12 25 L16 29 20 25 M25 12 L29 16 25 20
+                    M7 12 L3 16 7 20" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 zoom-in" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="14" cy="14" r="12" />
+                    <path d="M23 23 L30 30" />
+                    <path d="M14 8 L14 20 M8 14 L20 14" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 zoom-out" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="14" cy="14" r="12" />
+                    <path d="M23 23 L30 30" />
+                    <path d="M8 14 L20 14" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 zoom-reset" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="14" cy="14" r="12" />
+                    <path d="M23 23 L30 30" />
+                    <path d="M9 12 L9 9 12 9 M16 9 L19 9 19 12 M9 16 L9 19 12 19 M19 16 L19 19 16 19" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 fullscreen" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M4 12 L4 4 12 4 M20 4 L28 4 28 12 M4 20 L4 28 12 28 M28 20 L28 28 20 28" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 fullscreen-exit" fill="none"
+                    stroke="currentColor" stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 12 L12 12 12 4 M20 4 L20 12 28 12 M4 20 L12 20 12 28 M28 20 L20 20 20 28" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 star" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 checkmark" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M2 20 L12 28 30 4" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 chevron-top" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M30 20 L16 8 2 20" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 chevron-right" fill="none"
+                    stroke="currentColor" stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 30 L24 16 12 2" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 chevron-bottom" fill="none"
+                    stroke="currentColor" stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M30 12 L16 24 2 12" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 chevron-left" fill="none"
+                    stroke="currentColor" stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 30 L8 16 20 2" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 arrow-top" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M6 10 L16 2 26 10 M16 2 L16 30" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 arrow-right" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M22 6 L30 16 22 26 M30 16 L2 16" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 arrow-bottom" fill="none"
+                    stroke="currentColor" stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 22 L16 30 26 22 M16 30 L16 2" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 arrow-left" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M10 6 L2 16 10 26 M2 16 L30 16" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 caret-top" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M30 22 L16 6 2 22 Z" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 caret-right" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M10 30 L26 16 10 2 Z" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 caret-bottom" fill="none"
+                    stroke="currentColor" stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M30 10 L16 26 2 10 Z" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 caret-left" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M22 30 L6 16 22 2 Z" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 start" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M8 2 L8 16 22 2 22 30 8 16 8 30" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 end" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M24 2 L24 16 10 2 10 30 24 16 24 30" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 eject" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M30 18 L16 5 2 18Z M2 25 L30 25" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 mute" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M20 16 C20 8 15 2 15 2 L8 10 2 10 2 22 8 22 15 30 C15 30 20 24 20 16 Z" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 volume" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M20 16 C20 8 15 2 15 2 L8 10 2 10 2 22 8 22 15 30 C15 30 20 24 20 16 Z M21 2 C21 2
+                    25 6 25 16 25 26 21 30 21 30 M27 4 C27 4 30 8 30 16 30 24 27 28 27 28" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 ban" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="16" cy="16" r="14" />
+                    <path d="M6 6 L26 26" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 flag" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M6 2 L6 30 M6 6 L26 6 20 12 26 18 6 18" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 options" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M28 6 L4 6 M28 16 L4 16 M28 26 L4 26 M24 3 L24 9 M8 13 L8 19 M20 23 L20 29" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 settings" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M13 2 L13 6 11 7 8 4 4 8 7 11 6 13 2 13 2 19 6 19 7 21 4 24 8 28 11 25 13 26 13 30
+                    19 30 19 26 21 25 24 28 28 24 25 21 26 19 30 19 30 13 26 13 25 11 28 8 24 4 21 7 19 6 19 2 Z" />
+                    <circle cx="16" cy="16" r="4" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 heart" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M4 16 C1 12 2 6 7 4 12 2 15 6 16 8 17 6 21 2 26 4 31 6 31 12 28 16 25 20 16 28 16
+                    28 16 28 7 20 4 16 Z" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 clock" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="16" cy="16" r="14" />
+                    <path d="M16 8 L16 16 20 20" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 menu" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M4 8 L28 8 M4 16 L28 16 M4 24 L28 24" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 msg" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M2 4 L30 4 30 22 16 22 8 29 8 22 2 22 Z" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 photo" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M20 24 L12 16 2 26 2 2 30 2 30 24 M16 20 L22 14 30 22 30 30 2 30 2 24" />
+                    <circle cx="10" cy="9" r="3" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 camera" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M2 8 L 9 8 12 4 20 4 23 8 30 8 30 26 2 26 Z" />
+                    <circle cx="16" cy="16" r="5" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 video" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M22 13 L30 8 30 24 22 19 Z M2 8 L2 24 22 24 22 8 Z" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 music" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M11 25 L11 6 24 3 24 23 M11 13 L24 10" />
+                    <ellipse cx="7" cy="25" rx="4" ry="5" />
+                    <ellipse cx="20" cy="23" rx="4" ry="5" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 mail" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M2 26 L30 26 30 6 2 6 Z M2 6 L16 16 30 6" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 home" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M12 20 L12 30 4 30 4 12 16 2 28 12 28 30 20 30 20 20 Z" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 user" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M22 11 C22 16 19 20 16 20 13 20 10 16 10 11 10 6 12 3 16 3 20 3 22 6 22 11 Z M4 30 L28
+                        30 C28 21 22 20 16 20 10 20 4 21 4 30 Z" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 signin" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M3 16 L23 16 M15 8 L23 16 15 24 M21 4 L29 4 29 28 21 28" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 signout" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M28 16 L8 16 M20 8 L28 16 20 24 M11 28 L3 28 3 4 11 4" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 trash" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M28 6 L6 6 8 30 24 30 26 6 4 6 M16 12 L16 24 M21 12 L20 24 M11 12 L12 24 M12 6 L13
+                    2 19 2 20 6" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 paperclip" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M10 9 L10 24 C10 28 13 30 16 30 19 30 22 28 22 24 L22 6 C22 3 20 2 18 2 16 2 14 3 14 6
+                        L14 23 C14 24 15 25 16 25 17 25 18 24 18 23 L18 9" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 file" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M6 2 L6 30 26 30 26 10 18 2 Z M18 2 L18 10 26 10" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 folder" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M2 26 L30 26 30 7 14 7 10 4 2 4 Z M30 12 L2 12" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 folder-open" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M4 28 L28 28 30 12 14 12 10 8 2 8 Z M28 12 L28 4 4 4 4 8" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 work" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M30 8 L2 8 2 26 30 26 Z M20 8 C20 8 20 4 16 4 12 4 12 8 12 8 M8 26 L8 8 M24 26 L24 8" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 portfolio" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M29 17 L29 28 3 28 3 17 M2 8 L30 8 30 16 C30 16 24 20 16 20 8 20 2 16 2 16 L2 8 Z M16
+                    22 L16 18 M20 8 C20 8 20 4 16 4 12 4 12 8 12 8" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 book" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M16 7 C16 7 9 1 2 6 L2 28 C9 23 16 28 16 28 16 28 23 23 30 28 L30 6 C23 1 16 7 16 7
+                    Z M16 7 L16 28" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 calendar" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M2 6 L2 30 30 30 30 6 Z M2 15 L30 15 M7 3 L7 9 M13 3 L13 9 M19 3 L19 9 M25 3 L25 9" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 print" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M7 25 L2 25 2 9 30 9 30 25 25 25 M7 19 L7 30 25 30 25 19 Z M25 9 L25 2 7 2 7 9 M22 14
+                        L25 14" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 eye" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="17" cy="15" r="1" />
+                    <circle cx="16" cy="16" r="6" />
+                    <path d="M2 16 C2 16 7 6 16 6 25 6 30 16 30 16 30 16 25 26 16 26 7 26 2 16 2 16 Z" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 bookmark" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M6 2 L26 2 26 30 16 20 6 30 Z" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 tag" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="24" cy="8" r="2" />
+                    <path d="M2 18 L18 2 30 2 30 14 14 30 Z" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 lightning" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M18 13 L26 2 8 13 14 19 6 30 24 19 Z" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 activity" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M4 16 L11 16 14 29 18 3 21 16 28 16" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 location" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="16" cy="11" r="4" />
+                    <path d="M24 15 C21 22 16 30 16 30 16 30 11 22 8 15 5 8 10 2 16 2 22 2 27 8 24 15 Z" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 export" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M28 22 L28 30 4 30 4 22 M16 4 L16 24 M8 12 L16 4 24 12" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 import" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M28 22 L28 30 4 30 4 22 M16 4 L16 24 M8 16 L16 24 24 16" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 inbox" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M2 15 L2 25 30 25 30 15 26 7 6 7 Z M2 15 L10 15 C10 15 11 20 16 20 21 20 22 15 22
+                    15 L30 15" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 archive" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M4 10 L4 28 28 28 28 10 M2 4 L2 10 30 10 30 4 Z M12 15 L20 15" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 reply" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M10 6 L3 14 10 22 M3 14 L18 14 C26 14 30 18 30 26" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 edit" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 compose" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M27 15 L27 30 2 30 2 5 17 5 M30 6 L26 2 9 19 7 25 13 23 Z M22 6 L26 10 Z M9 19 L13
+                    23 Z" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 upload" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M9 22 C0 23 1 12 9 13 6 2 23 2 22 10 32 7 32 23 23 22 M11 18 L16 14 21 18 M16 14
+                    L16 29" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 download" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M9 22 C0 23 1 12 9 13 6 2 23 2 22 10 32 7 32 23 23 22 M11 26 L16 30 21 26 M16 16
+                    L16 30" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 send" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M2 16 L30 2 16 30 12 20 Z M30 2 L12 20" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 link" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M18 8 C18 8 24 2 27 5 30 8 29 12 24 16 19 20 16 21 14 17 M14 24 C14 24 8 30 5 27 2 24
+                        3 20 8 16 13 12 16 11 18 15" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 code" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M10 9 L3 17 10 25 M22 9 L29 17 22 25 M18 7 L14 27" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 lock" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M5 15 L5 30 27 30 27 15 Z M9 15 C9 9 9 5 16 5 23 5 23 9 23 15 M16 20 L16 23" />
+                    <circle cx="16" cy="24" r="1" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 unlock" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M5 15 L5 30 27 30 27 15 Z M9 15 C9 7 9 3 16 3 23 3 23 8 23 9 M16 20 L16 23" />
+                    <circle cx="16" cy="24" r="1" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 bell" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M8 17 C8 12 9 6 16 6 23 6 24 12 24 17 24 22 27 25 27 25 L5 25 C5 25 8 22 8 17 Z M20 25
+                        C20 25 20 29 16 29 12 29 12 25 12 25 M16 3 L16 6" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 alert" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M16 3 L30 29 2 29 Z M16 11 L16 19 M16 23 L16 25" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 info" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M16 14 L16 23 M16 8 L16 10" />
+                    <circle cx="16" cy="16" r="14" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 creditcard" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M2 7 L2 25 30 25 30 7 Z M5 18 L9 18 M5 21 L11 21" />
+                    <path d="M2 11 L2 13 30 13 30 11 Z" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 cart" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M6 6 L30 6 27 19 9 19 M27 23 L10 23 5 2 2 2" />
+                    <circle cx="25" cy="27" r="2" />
+                    <circle cx="12" cy="27" r="2" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 bag" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M5 9 L5 29 27 29 27 9 Z M10 9 C10 9 10 3 16 3 22 3 22 9 22 9" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 gift" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M4 14 L4 30 28 30 28 14 M2 9 L2 14 30 14 30 9 Z M16 9 C 16 9 14 0 8 3 2 6 16 9 16 9 16
+                        9 18 0 24 3 30 6 16 9 16 9 M16 9 L16 30" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 external" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M14 9 L3 9 3 29 23 29 23 18 M18 4 L28 4 28 14 M28 4 L14 18" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 reload" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M29 16 C29 22 24 29 16 29 8 29 3 22 3 16 3 10 8 3 16 3 21 3 25 6 27 9 M20 10 L27
+                    9 28 2" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 clipboard" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M12 2 L12 6 20 6 20 2 12 2 Z M11 4 L6 4 6 30 26 30 26 4 21 4" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 filter" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M2 5 C2 5 6 3 16 3 26 3 30 5 30 5 L19 18 19 27 13 30 13 18 2 5Z" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 feed" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="6" cy="26" r="2" stroke="currentCol fill-noneor" />
+                    <path d="M4 15 C11 15 17 21 17 28 M4 6 C17 6 26 15 26 28" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 moon" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M14 2C 9 2 3 7 3 15 3 23 9 29 17 29 25 29 30 23 30 18 19 25 7 13 14 2Z" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 microphone" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M16 2 C12 2 12 6 12 6 L12 16 C12 16 12 20 16 20 20 20 20 16 20 16 L20 6 C20 6 20 2 16 2
+                        Z M8 17 C8 17 8 24 16 24 24 24 24 17 24 17 M13 29 L19 29 M16 24 L16 29" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 telephone" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M3 12 C3 5 10 5 16 5 22 5 29 5 29 12 29 20 22 11 22 11 L10 11 C10 11 3 20 3 12 Z M11
+                        14 C11 14 6 19 6 28 L26 28 C26 19 21 14 21 14 L11 14 Z" />
+                    <circle cx="16" cy="21" r="4" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 desktop" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M10 29 C10 29 10 24 16 24 22 24 22 29 22 29 L10 29 Z M2 6 L2 23 30 23 30 6 2 6 Z" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 mobile" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M21 2 L11 2 C10 2 9 3 9 4 L9 28 C9 29 10 30 11 30 L21 30 C22 30 23 29 23 28 L23 4 C23
+                    3 22 2 21 2 Z M9 5 L23 5 M9 27 L23 27" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 ellipsis-horizontal" fill="none"
+                    stroke="currentColor" stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="7" cy="16" r="2" />
+                    <circle cx="16" cy="16" r="2" />
+                    <circle cx="25" cy="16" r="2" />
+                </svg>
+                <svg class="text-primary stroke-width-2 w-8 h-8 mb-4 mx-2 ellipsis-vertical" fill="none"
+                    stroke="currentColor" stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="16" cy="7" r="2" />
+                    <circle cx="16" cy="16" r="2" />
+                    <circle cx="16" cy="25" r="2" />
+                </svg>
+            </div>
+
+            <small class="mb-3 mt-8">Social icons</small>
+            <div class="flex -mx-2">
+                <svg class="fill-primary w-6 h-6 mb-4 mx-2 facebook" viewBox="0 0 32 32">
+                    <path d="M18.6 17.5h4.9l.8-5.9h-5.7V7.5c0-1.2.9-2.1 2-2.1h3.6V0h-5.1c-3.6 0-6.5 2.9-6.5
+                    6.5v4.9H7.7v5.9h4.9V32h6V17.5z" />
+                </svg>
+                <svg class="fill-primary w-6 h-6 mb-4 mx-2 twitter" viewBox="0 0 32 32">
+                    <path d="M31.6 5.7c-.7.3-1.5.5-2.3.8.8-.8 1.5-1.7 1.9-2.9.1-.3-.3-.5-.5-.4-1.1.7-2.1 1.1-3.3
+                        1.3H27c-.3 0-.4-.1-.5-.3-1.3-.9-2.9-1.6-4.7-1.6-.7 0-1.5.1-2.1.4-2.3.7-4 2.5-4.5
+                        4.8-.3.8-.3 1.7-.1 2.5v.1l-.1.1C9.8 10.2 5.3 7.8 2.1 4c-.1-.2-.4-.2-.5.1C.9 5 .7 6.2.7
+                        7.6c0 1.9.8 3.6 2 4.9-.5-.3-1.1-.4-1.5-.7-.3-.1-.5 0-.5.3 0 2.8 1.6 5.2 4 6.4h-.2c-.4
+                        0-.8 0-1.2-.1-.3 0-.5.3-.4.4.8 2.5 2.9 4.4 5.5 4.8-2.1 1.5-4.5 2.1-7.1 2.1H.5c-.3
+                        0-.4.1-.5.4 0 .3 0 .5.3.7 2.8 1.6 6.2 2.5 9.5 2.5 2.9 0 5.6-.5 8.2-1.7 2.3-1.1 4.3-2.5
+                        6-4.4 1.6-1.7 2.8-3.9 3.6-6.2.8-2.1 1.2-4.5 1.2-6.7v-.1c0-.4.1-.7.4-.9 1.1-.8 2-1.9
+                        2.8-3.1.1-.2-.2-.6-.4-.5z" />
+                </svg>
+                <svg class="fill-primary w-6 h-6 mb-4 mx-2 pinterest" viewBox="0 0 32 32">
+                    <path d="M32 16.5C32.3 7.3 24.9-.1 15.7 0 7.1.1 0 7.3 0 16.1c0 6.3 3.7 11.7 9.1
+                    14.3.3.1.7-.1.7-.4 0-1.1 0-2.1.3-3.1.3-.9.9-4.3 1.5-6.4.3-1.1.3-2.1.1-3.3-.1-.4-.1-.8-.1-1.2
+                    0-2.4 1.3-4.1 3.1-4.1 1.5 0 2.1 1.1 2.1 2.4 0 1.5-.9 3.6-1.5 5.6-.4 1.7.8 3.1 2.5 3.1 3.1 0
+                    5.3-3.2 5.3-7.7 0-4.1-2.9-6.9-7.1-6.9-4.8 0-7.7 3.6-7.7 7.3 0 1.5.5 3.1
+                    1.2 3.9.1.1.1.3.1.5-.1.5-.4 1.7-.5 1.9-.1.3-.3.4-.5.3-2.1-.9-3.5-4.1-3.5-6.5.1-5.3 4-10.3
+                    11.3-10.3 5.9 0 10.5 4.3 10.5 9.9 0 5.9-3.7 10.5-8.8 10.5-1.3 0-2.7-.5-3.5-1.3-.3-.3-.7-.1-.7.1l-.8
+                    3.2c-.3.9-.8 2.1-1.3 3.1-.1.3 0 .5.3.7 1.3.3 2.7.5 4.1.5 8.3-.3 15.5-7.4 15.8-15.7z" />
+                </svg>
+                <svg class="fill-primary w-6 h-6 mb-4 mx-2 linkedin" viewBox="0 0 32 32">
+                    <path d="M4.3.6c2.1 0 3.6 1.7 3.6 3.8S6.1 8.1 4.1 8C2.1 8 .5 6.5.5 4.4S2.2.6 4.3.6zm2.1
+                        30.8H2c-.6 0-1-.4-1-1V11.8c0-.6.4-1 1-1h4.3c.6 0 1 .4 1 1v18.5c.2.7-.3 1.1-.9
+                        1.1zm25.1-14c0-3.9-3.1-7-7-7h-1.1c-2.1 0-4.1 1.1-5.2
+                        2.7-.1.1-.3.4-.3.6v-2.4c0-.3-.1-.4-.4-.4H12c-.3 0-.4.1-.4.4V31c0
+                        .3.1.4.4.4h5.6c.3 0 .4-.1.4-.4V19.6c0-2 1.5-3.6 3.5-3.6 1 0 2 .4 2.5 1 .7.7
+                        1 1.5 1 2.5V31c0 .3.1.4.4.4H31c.3 0 .4-.1.4-.4V17.4z" />
+                </svg>
+                <svg class="fill-primary w-6 h-6 mb-4 mx-2 youtube" viewBox="0 0 32 32">
+                    <path d="M25.3 4.7H6.7C2.9 4.7 0 7.6 0 11.3v9.3c0 3.7 2.9 6.7 6.7 6.7h18.7c3.7 0 6.7-2.9
+                        6.7-6.7v-9.3c-.1-3.7-3-6.6-6.8-6.6zm-4.5 11.7L12 20.5c-.3.1-.5 0-.5-.3v-8.5c0-.3.3-.4.5-.3l8.8
+                        4.4c.3.2.3.5 0 .6z" />
+                </svg>
+                <svg class="fill-primary w-6 h-6 mb-4 mx-2 instagram" viewBox="0 0 32 32">
+                    <path d="M22.6 0h-13C4.3 0 0 4.3 0 9.5v13C0 27.7 4.3 32 9.5 32h13c5.2 0 9.5-4.3
+                        9.5-9.5v-13c.1-5.2-4.2-9.5-9.4-9.5zm6.3 22.6c0 3.5-2.8 6.3-6.3 6.3h-13c-3.5
+                        0-6.3-2.8-6.3-6.3V9.5c0-3.5 2.8-6.3 6.3-6.3h13c3.5 0 6.3 2.8 6.3 6.3v13.1z" />
+                    <path d="M16.1 7.8c-4.6 0-8.3 3.7-8.3 8.3s3.7 8.3 8.3 8.3 8.3-3.7 8.3-8.3-3.8-8.3-8.3-8.3zm0
+                        13.4c-2.8 0-5.1-2.3-5.1-5.1s2.3-5.1 5.1-5.1 5.1 2.3 5.1 5.1-2.3 5.1-5.1 5.1z" />
+                    <circle cx="24.4" cy="7.8" r="2" />
+                </svg>
+                <svg class="fill-primary w-6 h-6 mb-4 mx-2 whatsapp" viewBox="0 0 32 32">
+                    <path d="M15.2 0C6.6.4 0 7.5.1 15.9c0 2.5.7 5.1 1.7 7.2L.1 31.3c-.1.4.3.8.8.7l8-1.9c2 1.1 4.4
+                        1.6 6.8 1.6 8.7.1 15.9-6.7 16.2-15.4C32.2 7.1 24.6-.4 15.2 0zm9.6 24.8c-2.4 2.4-5.5 3.6-8.8
+                        3.6-2 0-3.9-.4-5.5-1.3l-1.1-.5-4.9 1.2 1.1-5.1-.6-1.2c-.9-1.7-1.3-3.6-1.3-5.6 0-3.3 1.3-6.4
+                        3.6-8.8 2.3-2.3 5.5-3.6 8.8-3.6s6.4 1.3 8.8 3.6c2.4 2.4 3.6 5.5 3.6 8.8-.1 3.4-1.4 6.4-3.7
+                        8.9z" />
+                    <path d="M23.6 19.4l-3.1-.9c-.4-.1-.8 0-1.2.3l-.8.8c-.3.3-.8.4-1.2.3-1.5-.5-4.5-3.3-5.3-4.7-.3-.4-.1-.9
+                        .1-1.2l.7-.8c.4-.4.4-.8.3-1.2l-1.4-3c-.2-.7-1.2-1-1.7-.4-.9.7-1.9 1.7-2 3.1-.3 2.1.7 4.9 4.1 8.2
+                        4 3.7 7.4 4.3 9.4 3.7 1.2-.3 2.1-1.5 2.8-2.4.4-.7.1-1.7-.7-1.8z" />
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- COLLAPSE BUTTON -->
+    <!-- ---------------------------------------------- -->
+    <section class="py-8" id="collapse">
+        <div class="container mx-auto px-8">
+            <h2 class="text-lg text-gray-600 font-medium uppercase">Collapse</h2>
+
+            <span class="collapse button-primary button-sm cursor-pointer inline-flex justify-between items-center pl-3 pr-2" data-collapse="element">
+                Button
+                <svg class="w-4 h-4 text-white ml-3" fill="currentColor" viewBox="0 0 20 20"><path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>
+            </span>
+            <div id="element" class="w-full mt-6 p-8 bg-white rounded-lg">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis assumenda sapiente ipsa doloremque expedita ad veniam accusantium reprehenderit totam? Accusantium explicabo autem placeat velit inventore deserunt a quis? Voluptates, fugiat!
+            </div>
+        </div>
+    </section>
+
+    <!-- ACCORDION -->
+    <!-- ---------------------------------------------- -->
+    <section class="py-8" id="accordion">
+        <div class="container mx-auto px-8">
+            <h2 class="text-lg text-gray-600 font-medium uppercase">Accordion</h2>
+
+            <div class="accordion">
+                <div class="relative accordion__button w-full px-4 py-3 mb-2 bg-gray-800 hover:bg-gray-900 rounded-md text-white cursor-pointer">
+                    Section 1
+                    <svg class="absolute top-0 right-0 w-6 h-6 mt-3 mr-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>
+                </div>
+                <div class="accordion__content overflow-hidden max-h-0 px-4 transition-all duration-500 ease-in-out">
+                    <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium.</p>
+                </div>
+
+                <div class="relative accordion__button w-full px-4 py-3 mb-2 bg-gray-800 hover:bg-gray-900 rounded-md text-white cursor-pointer">
+                    Section 2
+                    <svg class="absolute top-0 right-0 w-6 h-6 mt-3 mr-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>
+                </div>
+                <div class="accordion__content overflow-hidden max-h-0 px-4 transition-all duration-500 ease-in-out">
+                    <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium.</p>
+                </div>
+
+                <div class="relative accordion__button w-full px-4 py-3 mb-2 bg-gray-800 hover:bg-gray-900 rounded-md text-white cursor-pointer">
+                    Section 3
+                    <svg class="absolute top-0 right-0 w-6 h-6 mt-3 mr-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>
+                </div>
+                <div class="accordion__content overflow-hidden max-h-0 px-4 transition-all duration-500 ease-in-out">
+                    <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium.</p>
+                </div>
+
+                <div class="relative accordion__button w-full px-4 py-3 mb-2 bg-gray-800 hover:bg-gray-900 rounded-md text-white cursor-pointer">
+                    Section 4
+                    <svg class="absolute top-0 right-0 w-6 h-6 mt-3 mr-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>
+                </div>
+                <div class="accordion__content overflow-hidden max-h-0 px-4 transition-all duration-500 ease-in-out">
+                    <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTIONS -->
+    <!-- ---------------------------------------------- -->
+    <section class="py-8" id="sections">
+        <div class="container mx-auto px-8">
+            <h2 class="text-lg text-gray-600 font-medium uppercase">Secciones</h2>
+        </div>
+    </section>
+
+    <section class="relative py-12">
+        <div class="md:absolute inset-y-0 left-0 w-full md:w-1/2 h-full">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80" alt="" class="object-cover object-center w-full h-full">
+        </div>
+        <div class="container mx-auto px-8">
+            <div class="flex flex-wrap justify-end -mx-8">
+                <div class="w-full md:w-5/12 px-8">
+                    <h2>Section image left</h2>
+                    <p>Zombies reversus ab inferno, nam malum cerebro. De carne animata corpora quaeritis. Summus vel maleficia? De Apocalypsi undead dictum mauris. Hi mortuis soulless creaturas, imo monstra adventus vultus comedat cerebella viventium. Qui offenderit rapto, terribilem incessu. The voodoo sacerdos suscitat mortuos comedere carnem. Search for solum oculi eorum defunctis cerebro. Nescio an Undead zombies. Sicut malus movie horror.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<div class="container mx-auto pt-8 px-8">
+<div class="relative m-0 px-10 py-8 bg-gray-900 text-white rounded-md">
+<pre class="overflow-auto" id="section-img-left">
+<span class="text-gray-600">&lt;!-- Section Image Left --&gt;</span>
+&lt;section class="relative py-12"&gt;
+    &lt;div class="md:absolute inset-y-0 left-0 w-full md:w-1/2 h-full"&gt;
+        &lt;img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80" alt="" class="object-cover object-center w-full h-full"&gt;
+    &lt;/div&gt;
+    &lt;div class="container mx-auto px-8"&gt;
+        &lt;div class="flex flex-wrap justify-end -mx-8"&gt;
+            &lt;div class="w-full md:w-5/12 px-8"&gt;
+                &lt;h2&gt;Section image left&lt;/h2&gt;
+                &lt;p&gt;Zombies reversus ab inferno, nam malum cerebro. De carne animata corpora quaeritis. Summus vel maleficia? De Apocalypsi undead dictum mauris. Hi mortuis soulless creaturas, imo monstra adventus vultus comedat cerebella viventium. Qui offenderit rapto, terribilem incessu. The voodoo sacerdos suscitat mortuos comedere carnem. Search for solum oculi eorum defunctis cerebro. Nescio an Undead zombies. Sicut malus movie horror.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+</pre>
+<span class="absolute flex items-center right-0 top-0 mt-4 mr-4" onclick="copyToClipboard('section-img-left', this);">
+    <small class="hidden mr-2 text-white">copied!</small>
+    <svg class="w-6 h-6 text-gray-600 hover:text-gray-500 cursor-pointer" fill="currentColor" viewBox="0 0 20 20"><path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path><path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path></svg>
+</span>
+</div>
+</div>
+
+    <span class="block mt-8 pt-8 border-t border-gray-300"></span>
+
+    <section class="relative py-12">
+        <div class="md:absolute inset-y-0 right-0 w-full md:w-1/2 h-full">
+            <img src="https://images.unsplash.com/photo-1525755596908-8f1446d13044?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1001&q=80" alt="" class="object-cover object-center w-full h-full">
+        </div>
+        <div class="container mx-auto px-8">
+            <div class="flex flex-wrap -mx-8">
+                <div class="w-full md:w-5/12 px-8">
+                    <h2>Section image right</h2>
+                    <p>Zombies reversus ab inferno, nam malum cerebro. De carne animata corpora quaeritis. Summus vel maleficia? De Apocalypsi undead dictum mauris. Hi mortuis soulless creaturas, imo monstra adventus vultus comedat cerebella viventium. Qui offenderit rapto, terribilem incessu. The voodoo sacerdos suscitat mortuos comedere carnem. Search for solum oculi eorum defunctis cerebro. Nescio an Undead zombies. Sicut malus movie horror.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<div class="container mx-auto p-8">
+<div class="relative m-0 px-10 py-8 bg-gray-900 text-white rounded-md">
+<pre class="overflow-auto" id="section-img-right">
+<span class="text-gray-600">&lt;!-- Section Image Right --&gt;</span>
+&lt;section class="relative py-12"&gt;
+    &lt;div class="md:absolute inset-y-0 right-0 w-full md:w-1/2 h-full"&gt;
+        &lt;img src="https://images.unsplash.com/photo-1525755596908-8f1446d13044?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1001&q=80" alt="" class="object-cover object-center w-full h-full"&gt;
+    &lt;/div&gt;
+    &lt;div class="container mx-auto px-8"&gt;
+        &lt;div class="flex flex-wrap -mx-8"&gt;
+            &lt;div class="w-full md:w-5/12 px-8"&gt;
+                &lt;h2&gt;Section image right&lt;/h2&gt;
+                &lt;p&gt;Zombies reversus ab inferno, nam malum cerebro. De carne animata corpora quaeritis. Summus vel maleficia? De Apocalypsi undead dictum mauris. Hi mortuis soulless creaturas, imo monstra adventus vultus comedat cerebella viventium. Qui offenderit rapto, terribilem incessu. The voodoo sacerdos suscitat mortuos comedere carnem. Search for solum oculi eorum defunctis cerebro. Nescio an Undead zombies. Sicut malus movie horror.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+</pre>
+<span class="absolute flex items-center right-0 top-0 mt-4 mr-4" onclick="copyToClipboard('section-img-right', this);">
+    <small class="hidden mr-2 text-white">copied!</small>
+    <svg class="w-6 h-6 text-gray-600 hover:text-gray-500 cursor-pointer" fill="currentColor" viewBox="0 0 20 20"><path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path><path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path></svg>
+</span>
+</div>
+</div>
+
+    <!-- Lists -->
+    <!-- ---------------------------------------------- -->
+    <section class="py-8 pb-48" id="lists">
+        <div class="container mx-auto px-8">
+            <h2 class="text-lg text-gray-600 font-medium uppercase">List styles</h2>
+
+            <small class="mb-3">Listado simple</small>
+
+            <div class="flex flex-wrap -mx-3">
+                <div class="w-full sm:w-1/2 lg:w-1/3 px-3 mb-6">
+                    <div class="flex flex-col h-full">
+                        <div class="w-full overflow-hidden">
+                            <a href="#" title=""><img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" alt="" class="object-cover w-full h-full"></a>
+                        </div>
+                        <div class="flex flex-col flex-grow inset-0">
+                            <h3>Titulo de la lista</h3>
+                            <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis.</p>
+                            <div class="mt-auto"><a href="#" title="" class="button-primary">View more</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full sm:w-1/2 lg:w-1/3 px-3 mb-6">
+                    <div class="flex flex-col h-full">
+                        <div class="w-full overflow-hidden">
+                            <a href="#" title=""><img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" alt="" class="object-cover w-full h-full"></a>
+                        </div>
+                        <div class="flex flex-col flex-grow inset-0">
+                            <h3>Titulo de la lista</h3>
+                            <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis.</p>
+                            <div class="mt-auto"><a href="#" title="" class="button-primary">View more</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full sm:w-1/2 lg:w-1/3 px-3 mb-6">
+                    <div class="flex flex-col h-full">
+                        <div class="w-full overflow-hidden">
+                            <a href="#" title=""><img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" alt="" class="object-cover w-full h-full"></a>
+                        </div>
+                        <div class="flex flex-col flex-grow inset-0">
+                            <h3>Titulo de la lista</h3>
+                            <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis.</p>
+                            <div class="mt-auto"><a href="#" title="" class="button-primary">View more</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<div class="relative m-0 px-10 py-8 bg-gray-900 text-white rounded-md">
+<pre class="overflow-auto" id="simple-listing">
+<span class="text-gray-600">&lt;!-- Simple Listing --&gt;</span>
+&lt;div class="flex flex-wrap -mx-3"&gt;
+    <span class="text-gray-600">&lt;!-- Start loop --&gt;</span>
+    &lt;div class="w-full sm:w-1/2 lg:w-1/3 px-3 mb-6"&gt;
+        &lt;div class="flex flex-col h-full"&gt;
+            &lt;div class="w-full overflow-hidden"&gt;
+                &lt;a href="#" title=""&gt;&lt;img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" alt="" class="object-cover w-full h-full"&gt;&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class="flex flex-col flex-grow inset-0"&gt;
+                &lt;h3&gt;Titulo de la lista&lt;/h3&gt;
+                &lt;p&gt;Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis.&lt;/p&gt;
+                &lt;div class="mt-auto"&gt;&lt;a href="#" title="" class="button-primary"&gt;View more&lt;/a&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    <span class="text-gray-600">&lt;!-- End loop --&gt;</span>
+&lt;/div&gt;
+</pre>
+<span class="absolute flex items-center right-0 top-0 mt-4 mr-4" onclick="copyToClipboard('simple-listing', this);">
+    <small class="hidden mr-2 text-white">copied!</small>
+    <svg class="w-6 h-6 text-gray-600 hover:text-gray-500 cursor-pointer" fill="currentColor" viewBox="0 0 20 20"><path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path><path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path></svg>
+</span>
+</div>
+
+            <span class="block mt-5 pt-8 border-t border-gray-300"></span>
+
+            <small class="mb-3">Listado row</small>
+
+            <div class="flex flex-wrap -mx-3">
+                <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-3 mb-6">
+                    <div class="flex flex-col md:flex-row h-full">
+                        <div class="w-full md:w-1/3 h-full sm:h-auto md:h-full overflow-hidden">
+                            <a href="#" title=""><img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=250&q=80" alt="" class="object-cover w-full h-full"></a>
+                        </div>
+                        <div class="flex flex-col flex-grow inset-0 w-full md:w-2/3 md:pl-6">
+                            <h3 class="mt-0">Titulo de la lista</h3>
+                            <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis.</p>
+                            <div class="mt-auto"><a href="#" title="" class="button-primary">View more</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-3 mb-6">
+                    <div class="flex flex-col md:flex-row h-full">
+                        <div class="w-full md:w-1/3 h-full sm:h-auto md:h-full overflow-hidden">
+                            <a href="#" title=""><img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=250&q=80" alt="" class="object-cover w-full h-full"></a>
+                        </div>
+                        <div class="flex flex-col flex-grow inset-0 w-full md:w-2/3 md:pl-6">
+                            <h3 class="mt-0">Titulo de la lista</h3>
+                            <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis.</p>
+                            <div class="mt-auto"><a href="#" title="" class="button-primary">View more</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<div class="relative m-0 px-10 py-8 bg-gray-900 text-white rounded-md">
+<pre class="overflow-auto" id="row-listing">
+<span class="text-gray-600">&lt;!-- Row Listing --&gt;</span>
+&lt;div class="flex flex-wrap -mx-3"&gt;
+    <span class="text-gray-600">&lt;!-- Start loop --&gt;</span>
+    &lt;div class="w-full sm:w-1/2 md:w-full lg:w-1/2 px-3 mb-6"&gt;
+        &lt;div class="flex flex-col md:flex-row h-full"&gt;
+            &lt;div class="w-full md:w-1/3 h-full sm:h-auto md:h-full overflow-hidden"&gt;
+                &lt;a href="#" title=""&gt;&lt;img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=250&q=80" alt="" class="object-cover w-full h-full"&gt;&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class="flex flex-col flex-grow inset-0 w-full md:w-2/3 md:pl-6"&gt;
+                &lt;h3 class="mt-0"&gt;Titulo de la lista&lt;/h3&gt;
+                &lt;p&gt;Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis.&lt;/p&gt;
+                &lt;div class="mt-auto"&gt;&lt;a href="#" title="" class="button-primary"&gt;View more&lt;/a&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    <span class="text-gray-600">&lt;!-- End loop --&gt;</span>
+&lt;/div&gt;
+</pre>
+<span class="absolute flex items-center right-0 top-0 mt-4 mr-4" onclick="copyToClipboard('row-listing', this);">
+    <small class="hidden mr-2 text-white">copied!</small>
+    <svg class="w-6 h-6 text-gray-600 hover:text-gray-500 cursor-pointer" fill="currentColor" viewBox="0 0 20 20"><path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path><path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path></svg>
+</span>
+</div>
+
+            <span class="block mt-5 pt-8 border-t border-gray-300"></span>
+
+            <small class="mb-3">Listado absolute</small>
+
+            <div class="flex flex-wrap items-stretch -mx-3">
+                <div class="w-full lg:w-1/2 xl:w-1/3 px-3 mb-6">
+                    <a href="#" title="" class="group">
+                        <div class="relative h-full">
+                            <div class="w-full h-auto overflow-hidden"><!-- 👈 Poner en este div la altura de la imagen deseada (por defecto auto) -->
+                                <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" alt="" class="object-cover w-full h-full transition ease-in-out duration-500 transform group-hover:scale-110">
+                            </div>
+                            <div class="absolute flex flex-col flex-grow inset-0 p-8 md:p-12 z-10">
+                                <h3 class="mt-0 text-white">Titulo de la lista</h3>
+                                <p class="text-white">Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis.</p>
+                                <div class="mt-auto text-white"><span class="button-primary">View more</span></div>
+                            </div>
+                            <span class="absolute inset-0 bg-black opacity-50 transition ease-in-out duration-500 opacity-50 group-hover:opacity-25"></span>
+                        </div>
+                    </a>
+                </div>
+                <div class="w-full lg:w-1/2 xl:w-1/3 px-3 mb-6">
+                    <a href="#" title="" class="group">
+                        <div class="relative">
+                            <div class="w-full h-auto overflow-hidden"><!-- 👈 Poner en este div la altura de la imagen deseada (por defecto auto) -->
+                                <img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" alt="" class="object-cover w-full h-full transition ease-in-out duration-500 transform group-hover:scale-110">
+                            </div>
+                            <div class="absolute flex flex-col flex-grow inset-0 p-8 md:p-12 z-10">
+                                <h3 class="mt-0 text-white">Titulo de la lista</h3>
+                                <p class="text-white">Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis.</p>
+                                <div class="mt-auto text-white"><span class="button-primary">View more</span></div>
+                            </div>
+                            <span class="absolute inset-0 bg-black opacity-50 transition ease-in-out duration-500 opacity-50 group-hover:opacity-25"></span>
+                        </div>
+                    </a>
+                </div>
+                <div class="w-full lg:w-1/2 xl:w-1/3 px-3 mb-6">
+                    <a href="#" title="" class="group">
+                        <div class="relative">
+                            <div class="w-full h-auto overflow-hidden"><!-- 👈 Poner en este div la altura de la imagen deseada (por defecto auto) -->
+                                <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" alt="" class="object-cover w-full h-full transition ease-in-out duration-500 transform group-hover:scale-110">
+                            </div>
+                            <div class="absolute flex flex-col flex-grow inset-0 p-8 md:p-12 z-10">
+                                <h3 class="mt-0 text-white">Titulo de la lista</h3>
+                                <p class="text-white">Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis.</p>
+                                <div class="mt-auto text-white"><span class="button-primary">View more</span></div>
+                            </div>
+                            <span class="absolute inset-0 bg-black opacity-50 transition ease-in-out duration-500 opacity-50 group-hover:opacity-25"></span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+<div class="relative m-0 px-10 py-8 bg-gray-900 text-white rounded-md">
+<pre class="overflow-auto" id="absolute-listing">
+<span class="text-gray-600">&lt;!-- Absolute Listing --&gt;</span>
+&lt;div class="flex flex-wrap items-stretch -mx-3"&gt;
+    <span class="text-gray-600">&lt;!-- Start loop --&gt;</span>
+    &lt;div class="w-full lg:w-1/2 xl:w-1/3 px-3 mb-6"&gt;
+        &lt;a href="#" title="" class="group"&gt;
+            &lt;div class="relative h-full"&gt;
+                &lt;div class="w-full h-auto overflow-hidden"&gt;<span class="text-gray-600">&lt;!-- Poner en este div la altura de la imagen deseada (por defecto auto) --&gt;</span>
+                    &lt;img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" alt="" class="object-cover w-full h-full transition ease-in-out duration-500 transform group-hover:scale-110"&gt;
+                &lt;/div&gt;
+                &lt;div class="absolute flex flex-col flex-grow inset-0 p-8 md:p-12 z-10"&gt;
+                    &lt;h3 class="mt-0 text-white"&gt;Titulo de la lista&lt;/h3&gt;
+                    &lt;p class="text-white"&gt;Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis.&lt;/p&gt;
+                    &lt;div class="mt-auto text-white"&gt;&lt;span class="button-primary"&gt;View more&lt;/span&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;span class="absolute inset-0 bg-black opacity-50 transition ease-in-out duration-500 opacity-50 group-hover:opacity-25"&gt;&lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    <span class="text-gray-600">&lt;!-- End loop --&gt;</span>
+&lt;/div&gt;
+</pre>
+<span class="absolute flex items-center right-0 top-0 mt-4 mr-4" onclick="copyToClipboard('absolute-listing', this);">
+    <small class="hidden mr-2 text-white">copied!</small>
+    <svg class="w-6 h-6 text-gray-600 hover:text-gray-500 cursor-pointer" fill="currentColor" viewBox="0 0 20 20"><path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path><path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path></svg>
+</span>
+</div>
+
+            <span class="block mt-5 pt-8 border-t border-gray-300"></span>
+
+            <small class="mb-3">Listado card</small>
+
+            <div class="flex flex-wrap -mx-3">
+                <div class="w-full md:w-1/2 lg:w-1/3 px-3 mb-6">
+                    <div class="p-8 h-full md:p-12 bg-white rounded-lg">
+                        <div class="flex flex-col flex-grow inset-0 h-full">
+                            <h3 class="mt-0">Titulo de la lista</h3>
+                            <p>Zombie ipsum reversus ab viral inferno.</p>
+                            <div class="mt-auto"><a href="#" title="" class="button-primary">View more</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/3 px-3 mb-6">
+                    <div class="p-8 h-full md:p-12 bg-white rounded-lg">
+                        <div class="flex flex-col flex-grow inset-0 h-full">
+                            <h3 class="mt-0">Titulo de la lista</h3>
+                            <p>Zombie ipsum reversus ab viral inferno de carne lumbering animata corpora quaeritis.</p>
+                            <div class="mt-auto"><a href="#" title="" class="button-primary">View more</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/3 px-3 mb-6">
+                    <div class="p-8 h-full md:p-12 bg-white rounded-lg">
+                        <div class="flex flex-col flex-grow inset-0 h-full">
+                            <h3 class="mt-0">Titulo de la lista</h3>
+                            <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis.</p>
+                            <div class="mt-auto"><a href="#" title="" class="button-primary">View more</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<div class="relative m-0 px-10 py-8 bg-gray-900 text-white rounded-md">
+<pre class="overflow-auto" id="card-listing">
+<span class="text-gray-600">&lt;!-- Card Listing --&gt;</span>
+&lt;div class="flex flex-wrap -mx-3"&gt;
+    <span class="text-gray-600">&lt;!-- Start loop --&gt;</span>
+    &lt;div class="w-full md:w-1/2 lg:w-1/3 px-3 mb-6"&gt;
+        &lt;div class="p-8 h-full md:p-12 bg-white rounded-lg"&gt;
+            &lt;div class="flex flex-col flex-grow inset-0 h-full"&gt;
+                &lt;h3 class="mt-0"&gt;Titulo de la lista&lt;/h3&gt;
+                &lt;p&gt;Zombie ipsum reversus ab viral inferno.&lt;/p&gt;
+                &lt;div class="mt-auto"&gt;&lt;a href="#" title="" class="button-primary"&gt;View more&lt;/a&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    <span class="text-gray-600">&lt;!-- End loop --&gt;</span>
+&lt;/div&gt;
+</pre>
+<span class="absolute flex items-center right-0 top-0 mt-4 mr-4" onclick="copyToClipboard('card-listing', this);">
+    <small class="hidden mr-2 text-white">copied!</small>
+    <svg class="w-6 h-6 text-gray-600 hover:text-gray-500 cursor-pointer" fill="currentColor" viewBox="0 0 20 20"><path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path><path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path></svg>
+</span>
+</div>
+
+            <span class="block mt-5 pt-8 border-t border-gray-300"></span>
+
+            <small class="mb-3">Listado card con icono</small>
+
+            <div class="flex flex-wrap -mx-3">
+                <div class="w-full md:w-1/2 lg:w-1/3 px-3 mb-6">
+                    <div class="p-8 h-full md:p-12 bg-white rounded-lg">
+                        <div class="flex items-start h-full">
+                            <svg class="text-primary-500 stroke-width-2 w-10 h-10" fill="none" stroke="currentColor"
+                                stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M16 14 L16 23 M16 8 L16 10" />
+                                <circle cx="16" cy="16" r="14" />
+                            </svg>
+                            <div class="flex flex-col flex-grow inset-0 w-full h-full ml-4">
+                                <h3 class="mt-0">Titulo de la lista</h3>
+                                <p>Zombie ipsum reversus ab viral inferno.</p>
+                                <div class="mt-auto"><a href="#" title="" class="button-primary">View more</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/3 px-3 mb-6">
+                    <div class="p-8 h-full md:p-12 bg-white rounded-lg">
+                        <div class="flex items-start h-full">
+                            <svg class="text-primary-500 stroke-width-2 w-10 h-10" fill="none" stroke="currentColor"
+                                stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M16 14 L16 23 M16 8 L16 10" />
+                                <circle cx="16" cy="16" r="14" />
+                            </svg>
+                            <div class="flex flex-col flex-grow inset-0 w-full h-full ml-4">
+                                <h3 class="mt-0">Titulo de la lista</h3>
+                                <p>Zombie ipsum reversus ab viral inferno de carne lumbering animata corpora quaeritis.</p>
+                                <div class="mt-auto"><a href="#" title="" class="button-primary">View more</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/3 px-3 mb-6">
+                    <div class="p-8 h-full md:p-12 bg-white rounded-lg">
+                        <div class="flex items-start h-full">
+                            <svg class="text-primary-500 stroke-width-2 w-10 h-10" fill="none" stroke="currentColor"
+                                stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M16 14 L16 23 M16 8 L16 10" />
+                                <circle cx="16" cy="16" r="14" />
+                            </svg>
+                            <div class="flex flex-col flex-grow inset-0 w-full h-full ml-4">
+                                <h3 class="mt-0">Titulo de la lista</h3>
+                                <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis.</p>
+                                <div class="mt-auto"><a href="#" title="" class="button-primary">View more</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<div class="relative m-0 px-10 py-8 bg-gray-900 text-white rounded-md">
+<pre class="overflow-auto" id="card-listing-icon">
+<span class="text-gray-600">&lt;!-- Card Listing Icon --&gt;</span>
+&lt;div class="flex flex-wrap -mx-3"&gt;
+    <span class="text-gray-600">&lt;!-- Start loop --&gt;</span>
+    &lt;div class="w-full md:w-1/2 lg:w-1/3 px-3 mb-6"&gt;
+        &lt;div class="p-8 h-full md:p-12 bg-white rounded-lg"&gt;
+            &lt;div class="flex items-start h-full"&gt;
+                &lt;svg class="text-primary-500 stroke-width-2 w-10 h-10" fill="none" stroke="currentColor"
+                    stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+                    stroke-linejoin="round"&gt;
+                    &lt;path d="M16 14 L16 23 M16 8 L16 10" /&gt;
+                    &lt;circle cx="16" cy="16" r="14" /&gt;
+                &lt;/svg&gt;
+                &lt;div class="flex flex-col flex-grow inset-0 w-full h-full ml-4"&gt;
+                    &lt;h3 class="mt-0"&gt;Titulo de la lista&lt;/h3&gt;
+                    &lt;p&gt;Zombie ipsum reversus ab viral inferno.&lt;/p&gt;
+                    &lt;div class="mt-auto"&gt;&lt;a href="#" title="" class="button-primary"&gt;View more&lt;/a&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    <span class="text-gray-600">&lt;!-- End loop --&gt;</span>
+&lt;/div&gt;
+</pre>
+<span class="absolute flex items-center right-0 top-0 mt-4 mr-4" onclick="copyToClipboard('card-listing-icon', this);">
+    <small class="hidden mr-2 text-white">copied!</small>
+    <svg class="w-6 h-6 text-gray-600 hover:text-gray-500 cursor-pointer" fill="currentColor" viewBox="0 0 20 20"><path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path><path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path></svg>
+</span>
+</div>
+
+            <span class="block mt-5 pt-8 border-t border-gray-300"></span>
+
+            <small class="mb-10">Listado imagen rounded</small>
+
+            <div class="flex flex-wrap -mx-3">
+                <div class="w-full md:w-1/2 lg:w-1/3 px-3 mb-12">
+                    <div class="flex items-start h-full">
+                        <div class="w-32 rounded-full overflow-hidden">
+                            <a href="#" title=""><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=100&h=100&q=80" alt="" class="object-cover w-full h-full"><a href="" title=""></a>
+                        </div>
+                        <div class="flex flex-col flex-grow inset-0 w-full h-full ml-6">
+                            <h3 class="mt-0">Titulo de la lista</h3>
+                            <p>Zombie ipsum reversus ab viral inferno.</p>
+                            <div class="mt-auto"><a href="#" title="" class="button-primary">View more</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/3 px-3 mb-12">
+                    <div class="flex items-start h-full">
+                        <div class="w-32 rounded-full overflow-hidden">
+                            <a href="#" title=""><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=100&h=100&q=80" alt="" class="object-cover w-full h-full"><a href="" title=""></a>
+                        </div>
+                        <div class="flex flex-col flex-grow inset-0 w-full h-full ml-6">
+                            <h3 class="mt-0">Titulo de la lista</h3>
+                            <p>Zombie ipsum reversus ab viral inferno de carne lumbering animata corpora quaeritis.</p>
+                            <div class="mt-auto"><a href="#" title="" class="button-primary">View more</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/3 px-3 mb-12">
+                    <div class="flex items-start h-full">
+                        <div class="w-32 rounded-full overflow-hidden">
+                            <a href="#" title=""><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=3&w=100&h=100&q=80" alt="" class="object-cover w-full h-full"><a href="" title=""></a>
+                        </div>
+                        <div class="flex flex-col flex-grow inset-0 w-full h-full ml-6">
+                            <h3 class="mt-0">Titulo de la lista</h3>
+                            <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis.</p>
+                            <div class="mt-auto"><a href="#" title="" class="button-primary">View more</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<div class="relative m-0 px-10 py-8 bg-gray-900 text-white rounded-md">
+<pre class="overflow-auto" id="rounded-listing">
+<span class="text-gray-600">&lt;!-- Rounded Image Listing --&gt;</span>
+&lt;div class="flex flex-wrap -mx-3"&gt;
+    <span class="text-gray-600">&lt;!-- Start loop --&gt;</span>
+    &lt;div class="w-full md:w-1/2 lg:w-1/3 px-3 mb-12"&gt;
+        &lt;div class="flex items-start h-full"&gt;
+            &lt;div class="w-32 rounded-full overflow-hidden"&gt;
+                &lt;a href="#" title=""&gt;&lt;img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=100&h=100&q=80" alt="" class="object-cover w-full h-full"&gt;&lt;a href="" title=""&gt;&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class="flex flex-col flex-grow inset-0 w-full h-full ml-6"&gt;
+                &lt;h3 class="mt-0"&gt;Titulo de la lista&lt;/h3&gt;
+                &lt;p&gt;Zombie ipsum reversus ab viral inferno.&lt;/p&gt;
+                &lt;div class="mt-auto"&gt;&lt;a href="#" title="" class="button-primary"&gt;View more&lt;/a&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    <span class="text-gray-600">&lt;!-- End loop --&gt;</span>
+&lt;/div&gt;
+</pre>
+<span class="absolute flex items-center right-0 top-0 mt-4 mr-4" onclick="copyToClipboard('rounded-listing', this);">
+    <small class="hidden mr-2 text-white">copied!</small>
+    <svg class="w-6 h-6 text-gray-600 hover:text-gray-500 cursor-pointer" fill="currentColor" viewBox="0 0 20 20"><path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path><path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path></svg>
+</span>
+</div>
+        </div>
+    </section>
+
+    <!-- UP BUTTON -->
+    <!-- ---------------------------------------------- -->
+    <span id="upButton" class="fixed flex items-center justify-center right-0 bottom-0 w-10 h-10 mb-3 mx-3 p-2 rounded bg-gray-900 z-50 transition duration-500 ease-in-out cursor-pointer">
+        <svg class="text-white w-full h-full" fill="none" stroke="currentColor"
+            stroke-width="2" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M6 10 L16 2 26 10 M16 2 L16 30" />
+        </svg>
+    </span>
+
+    <!-- COOKIES -->
+    <!-- ---------------------------------------------- -->
+    <div class="fixed flex items-center bottom-0 left-0 w-full sm:pb-3 sm:px-3 z-40" id="cookiesMessage">
+        <div class="flex items-center justify-between p-3 w-full bg-gray-900 sm:rounded text-gray-100">
+            <p class="mb-0 mx-3 text-sm">
+                Mensaje de cookies Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius blanditiis ratione
+                explicabo, mollitia ipsam consequatur sapiente. Veniam quasi odit iusto
+                <a href="#" title="...">More info</a>
+            </p>
+            <span id="cookiesAccept" class="button-ghost text-sm cursor-pointer border-white text-white">Aceptar</span>
+        </div>
+    </div>
+</body>
+<script src="./js/app.js"></script>
+<script>
+    const copyToClipboard = (str, e) => {
+        let elem = document.createElement('textarea');
+        let string = document.getElementById(str).textContent;
+        let message = e.getElementsByTagName('small')[0];
+
+        elem.value = string;
+        document.body.appendChild(elem);
+        elem.select();
+        document.execCommand('copy');
+        document.body.removeChild(elem);
+        message.classList.remove('hidden');
+        setTimeout(() => { message.classList.add('hidden'); }, 1500);
+    };
+</script>
+</html>
