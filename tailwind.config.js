@@ -103,7 +103,8 @@ module.exports = {
         require("@tailwindcss/custom-forms"),
         require("tailwindcss-buttons")({
             sizes: true
-        })
+        }),
+        require("./plugins/headerFixed")(),
     ],
     purge: [
         './public/**/*.html',
