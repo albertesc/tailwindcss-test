@@ -112,7 +112,8 @@ __webpack_require__(/*! ./utilities/burger */ "./src/js/utilities/burger.js");
 
 __webpack_require__(/*! ./utilities/collapse */ "./src/js/utilities/collapse.js");
 
-__webpack_require__(/*! ./utilities/cookies */ "./src/js/utilities/cookies.js");
+__webpack_require__(/*! ./utilities/cookies */ "./src/js/utilities/cookies.js"); // require("./utilities/counter");
+
 
 __webpack_require__(/*! ./utilities/header */ "./src/js/utilities/header.js");
 
