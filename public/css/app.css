@@ -699,9 +699,10 @@ blockquote {
  * */
 
 ul {
-  list-style-type: disc;
+  list-style-type: none;
+  margin-top: 0.75rem;
   margin-bottom: 0.75rem;
-  padding-left: 2rem;
+  padding: 0;
 }
 
 ol {
@@ -716,8 +717,24 @@ ul ul, ol ol, ul ol, ol ul {
 }
 
 li {
+  position: relative;
+  margin-bottom: 0.75rem;
+  padding-left: 2rem;
   font-size: 15px;
-  line-height: 1.625;
+  line-height: 1.75rem;
+}
+
+li:before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 1.25rem;
+  height: 1.75rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%234b5563' viewBox='0 0 20 20'%3E%3Cpath fill-rule='evenodd' d='M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z' clip-rule='evenodd'%3E%3C/path%3E%3C/svg%3E");
 }
 
 /*  Forms styles
@@ -1638,6 +1655,84 @@ label {
 .button-sm{
   font-size: 0.75rem;
   padding: 0.5rem 1rem;
+}
+
+.glide {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.glide * {
+  box-sizing: inherit;
+}
+
+.glide__track {
+  overflow: hidden;
+}
+
+.glide__slides {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transform-style: preserve-3d;
+  touch-action: pan-Y;
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+  will-change: transform;
+}
+
+.glide__slides--dragging {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.glide__slide {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  white-space: normal;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.glide__slide a {
+  -webkit-user-select: none;
+          user-select: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.glide__arrows {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.glide__bullets {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.glide--rtl {
+  direction: rtl;
 }
 
 .space-y-0 > :not(template) ~ :not(template){
@@ -12630,6 +12725,10 @@ label {
 
 .cursor-not-allowed{
   cursor: not-allowed;
+}
+
+.cursor-col-resize{
+  cursor: col-resize;
 }
 
 .block{
@@ -51375,6 +51474,10 @@ label {
 
   .sm\:cursor-not-allowed{
     cursor: not-allowed;
+  }
+
+  .sm\:cursor-col-resize{
+    cursor: col-resize;
   }
 
   .sm\:block{
@@ -90123,6 +90226,10 @@ label {
     cursor: not-allowed;
   }
 
+  .md\:cursor-col-resize{
+    cursor: col-resize;
+  }
+
   .md\:block{
     display: block;
   }
@@ -128869,6 +128976,10 @@ label {
     cursor: not-allowed;
   }
 
+  .lg\:cursor-col-resize{
+    cursor: col-resize;
+  }
+
   .lg\:block{
     display: block;
   }
@@ -167613,6 +167724,10 @@ label {
 
   .xl\:cursor-not-allowed{
     cursor: not-allowed;
+  }
+
+  .xl\:cursor-col-resize{
+    cursor: col-resize;
   }
 
   .xl\:block{

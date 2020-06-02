@@ -32,6 +32,9 @@ module.exports = {
             },
             backgroundColor: {
                 ...customColors
+            },
+            cursor: {
+                "col-resize": "col-resize"
             }
         },
         buttons: theme => ({
