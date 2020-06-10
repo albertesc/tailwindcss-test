@@ -28,7 +28,7 @@
             event.preventDefault();
             let anchor = document.querySelector(link.hash);
 
-            if(anchor != null) {
+            if (anchor != null) {
                 scrollTo(document.documentElement, anchor.offsetTop - margin, duration);
             }
         });

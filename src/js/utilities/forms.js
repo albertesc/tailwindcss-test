@@ -6,9 +6,9 @@
     "strict mode";
 
     // Ejemplos de uso de las funciones de validación de formularios
-    let form    = document.getElementById('form');
-    let send    = document.getElementById('sendBtn');
-    let formInputs   = document.getElementsByClassName('form-group');
+    let form = document.getElementById('form');
+    let send = document.getElementById('sendBtn');
+    let formInputs = document.getElementsByClassName('form-group');
 
     formInputs.forEach(input => {
         let i = input.getElementsByTagName('input');
@@ -16,9 +16,9 @@
         let error = input.getElementsByClassName('errorMsg');
     });
 
-    let name    = document.getElementById('name');
-    let last    = document.getElementById('last');
-    let email    = document.getElementById('email');
+    let name = document.getElementById('name');
+    let last = document.getElementById('last');
+    let email = document.getElementById('email');
 
     send.addEventListener('click', event => {
         event.preventDefault();
@@ -27,7 +27,7 @@
         let v_last = valid_noempty(last);
         let v_email = valid_noempty(email);
 
-        if(v_name && v_last && v_email) {
+        if (v_name && v_last && v_email) {
             form.submit();
         }
     })

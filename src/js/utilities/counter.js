@@ -9,13 +9,13 @@
     let counters = ['counter1', 'counter2', '...'];
     */
 
-import {CountUp} from 'CountUp.js';
+import { CountUp } from 'CountUp.js';
 import AOS from 'aos';
-AOS.init({once: true});
+AOS.init({ once: true });
 
 const counters = ['counter1'];
 const options = {
-  separator: '.'
+    separator: '.'
 };
 
 counters.forEach(counter => {

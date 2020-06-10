@@ -18,9 +18,9 @@
 
     elem = document.getElementById(selector);
 
-    if(disableOnTop) {
+    if (disableOnTop) {
         window.addEventListener('scroll', () => {
-            if(document.documentElement.scrollTop >= 100) {
+            if (document.documentElement.scrollTop >= 100) {
                 elem.classList.add('active');
             } else {
                 elem.classList.remove('active');

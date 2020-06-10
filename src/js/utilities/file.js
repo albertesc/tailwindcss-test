@@ -1,14 +1,30 @@
+; (function (window, undefined) {
+    "strict mode";
 
-/*  PENDIENTE DE REFACTORIZAR
-    */
+    // Config
+    // -----------------------
+    /*  Coloca las classes (con .) de los elementos correspondientes de tu html ej:
+        <label class="..."">
+            <input type="file" class="hidden file" />
+            <span class="file__name">Select a file</span>
+        </label>
 
-window.$ = require("jquery");
+        IMPORTANTE! El input i el nombre deben estar enmarcados con un label.
+        */
 
-$(function(){
-    $('#file-upload').change(function() {
-        var filepath = this.value;
-        var m = filepath.split("\\");
-        var filename = m[2];
-        $('.file-custom').html(filename);
+    let inputs = ".file";
+    let name = ".file__name";
+    // -----------------------
+    // End config
+
+    let fileInputs = document.querySelectorAll(inputs);
+
+    fileInputs.forEach(file => {
+        file.addEventListener("change", () => {
+            let filePath = file.value;
+            let archive = filePath.split("\\");
+            let fileName = archive[2];
+            file.parentNode.querySelectorAll(name)[0].innerHTML = fileName;
+        });
     });
-})
+})(window);

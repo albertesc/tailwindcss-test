@@ -15,9 +15,9 @@
 
     var header = document.getElementsByTagName('header');
 
-    if(active) {
+    if (active) {
         window.addEventListener('scroll', () => {
-            if(document.documentElement.scrollTop >= 1) {
+            if (document.documentElement.scrollTop >= 1) {
                 header[0].classList.add('header-fixed');
             } else {
                 header[0].classList.remove('header-fixed');

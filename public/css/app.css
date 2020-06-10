@@ -705,18 +705,7 @@ ul {
   padding: 0;
 }
 
-ol {
-  list-style-type: decimal;
-  margin-bottom: 0.75rem;
-  padding-left: 2rem;
-}
-
-ul ul, ol ol, ul ol, ol ul {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-li {
+ul li {
   position: relative;
   margin-bottom: 0.75rem;
   padding-left: 2rem;
@@ -724,7 +713,7 @@ li {
   line-height: 1.75rem;
 }
 
-li:before {
+ul li:before {
   content: "";
   position: absolute;
   display: block;
@@ -735,6 +724,41 @@ li:before {
   background-repeat: no-repeat;
   background-position: center;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%234b5563' viewBox='0 0 20 20'%3E%3Cpath fill-rule='evenodd' d='M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z' clip-rule='evenodd'%3E%3C/path%3E%3C/svg%3E");
+}
+
+ol {
+  list-style-type: none;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  padding: 0;
+  counter-reset: counter;
+}
+
+ol li {
+  display: flex;
+  align-items: baseline;
+  position: relative;
+  margin-bottom: 0.75rem;
+  padding-left: 0;
+  font-size: 15px;
+  line-height: 1.75rem;
+  counter-increment: counter;
+}
+
+ol li:before {
+  content: counter(counter) ".";
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 1rem;
+  height: 1.5rem;
+  margin-right: 0.75rem;
+}
+
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /*  Forms styles

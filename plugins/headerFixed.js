@@ -1,4 +1,4 @@
-module.exports = function() { 
+module.exports = function () {
     return function ({ addVariant, e }) {
         addVariant('header-fixed', ({ modifySelectors, separator }) => {
             modifySelectors(({ className }) => {

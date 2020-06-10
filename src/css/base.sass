@@ -57,20 +57,29 @@ blockquote
 ul
 	@apply list-none my-3 p-0
 
+	li
+		@apply relative mb-3 pl-8 text-base leading-7
+
+		&:before
+			content: ''
+			@apply absolute block top-0 left-0 w-5 h-7 bg-no-repeat bg-center
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%234b5563' viewBox='0 0 20 20'%3E%3Cpath fill-rule='evenodd' d='M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z' clip-rule='evenodd'%3E%3C/path%3E%3C/svg%3E")
+			// Poner aquí ☝️ el icono del listado en formato svg. Puedes crear la url en la página https://yoksel.github.io/url-encoder/
+
 ol
-	@apply list-decimal mb-3 pl-8
+	@apply list-none my-3 p-0
+	counter-reset: counter
+
+	li
+		@apply flex items-baseline relative mb-3 pl-0 text-base leading-7
+		counter-increment: counter
+
+		&:before
+			content: counter(counter) "."
+			@apply flex flex-shrink-0 justify-center items-center w-4 h-6 mr-3
 
 ul ul, ol ol, ul ol, ol ul
 	@apply my-0
-
-li
-	@apply relative mb-3 pl-8 text-base leading-7
-
-	&:before
-		content: ''
-		@apply absolute block top-0 left-0 w-5 h-7 bg-no-repeat bg-center
-		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%234b5563' viewBox='0 0 20 20'%3E%3Cpath fill-rule='evenodd' d='M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z' clip-rule='evenodd'%3E%3C/path%3E%3C/svg%3E")
-		// Poner aquí ☝️ el icono del listado en formato svg. Puedes crear la url en la página https://yoksel.github.io/url-encoder/
 
 
 /*  Forms styles

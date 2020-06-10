@@ -3,6 +3,7 @@ require("./utilities/anchors");
 require("./utilities/burger");
 require("./utilities/collapse");
 require("./utilities/cookies");
+require("./utilities/file");
 require("./utilities/header");
 require("./utilities/tabs");
 require("./utilities/up");
