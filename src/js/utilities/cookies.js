@@ -12,7 +12,7 @@
 
     let cookiesElement = 'cookiesMessage';
     let cookiesBtn = 'cookiesAccept';
-    let disturbElements = ['upButton'];
+    let disturbElements = [];
     // -----------------------
     // End config
 
@@ -20,7 +20,7 @@
 
     if (cookies) {
         let btn = document.getElementById(cookiesBtn);
-        let cookiesHeight = cookies.offsetHeight;
+        let cookiesHeight = cookies.offsetHeight; 
 
         btn.addEventListener('click', function () {
             cookies.remove();
