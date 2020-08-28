@@ -3846,7 +3846,7 @@ newRangeSlider.didChanged = function (min, max) {
   // -----------------------
 
   /*  Coloca en la variable selector, la clase (con el . delante) de los bottones de accordion correspondientes de tu html ej:
-       <div class="accordion__button ">Button</div>
+        <div class="accordion__button ">Button</div>
       <div class="accordion__content ">Lorem ...</div>
       */
 
@@ -3885,12 +3885,12 @@ newRangeSlider.didChanged = function (min, max) {
   // -----------------------
 
   /*  Coloca en la variable selector, la clase (con el . delante) de los elementos correspondientes de tu html ej:
-       <a href="#contacto" class="anchor ">Contacto</a>
+        <a href="#contacto" class="anchor ">Contacto</a>
       <a href="#empresa" class="anchor ">Empresa</a>
       ...
       <section id="contacto"> ... </section>
       <section id="empresa"> ... </section>
-       Puedes seleccionar la duración de la animación en milisegundos en la variable duration.
+        Puedes seleccionar la duración de la animación en milisegundos en la variable duration.
       Si necesitas un margen para headers fixed, por ejemplo, pues modificarlo en la variable margin.
       */
 
@@ -3959,11 +3959,11 @@ newRangeSlider.didChanged = function (min, max) {
   // -----------------------
 
   /*  Coloca las id's (sin #) de los elementos correspondientes de tu html
-       Ha estos dos elementos se les aplicará la clase "open" para el cambio de estado que puedes
+        Ha estos dos elementos se les aplicará la clase "open" para el cambio de estado que puedes
       modificar con tu css.
-       IMPORTANTE: Hay que aplicar el atributo data-toggle en estos dos elementos con el valor
+        IMPORTANTE: Hay que aplicar el atributo data-toggle en estos dos elementos con el valor
       de la id (sin #) del elemento que se quiere modificar ej:
-       buttonOpen  -> <a href="#" data-toggle="menu" id="menuOpen" class="" title="...">Abrir</a>
+        buttonOpen  -> <a href="#" data-toggle="menu" id="menuOpen" class="" title="...">Abrir</a>
       buttonClose -> <a href="#" data-toggle="menu" id="menuClose" class="" title="...">Cerrar</a>
       menu        -> <div id="menu">...</div>
       */
@@ -4004,11 +4004,11 @@ newRangeSlider.didChanged = function (min, max) {
   // -----------------------
 
   /*  Coloca en la variable selectorButton, la clase (con el . delante) de los elementos correspondientes de tu html ej:
-       IMPORTANTE: Hay que aplicar el atributo data-collapse en estos dos elementos con el valor
+        IMPORTANTE: Hay que aplicar el atributo data-collapse en estos dos elementos con el valor
       de la id (sin #) del elemento que se quiere mostrar/ocultar ej:
-       <span class="collapse " data-collapse="element">Button</span>
+        <span class="collapse " data-collapse="element">Button</span>
       <div id="element">...</div>
-       Al elemento oculto se les aplicará la clase "active" para el cambio de estado que puedes
+        Al elemento oculto se les aplicará la clase "active" para el cambio de estado que puedes
       modificar con tu css.
       */
 
@@ -4042,13 +4042,13 @@ newRangeSlider.didChanged = function (min, max) {
 
   /*  Coloca las id's (sin #) de los elementos correspondientes de tu html ej:
       <div id="cookiesMessage">...<span id="cookiesAccept" class="">Acceptar</span></div>
-       Coloca las id's de los elementos que quedan solapados con las cookies en la variable disturbElements ej:
+        Coloca las id's de los elementos que quedan solapados con las cookies en la variable disturbElements ej:
       let disturbElements = ['upButton', 'element1', '...'];
       */
 
   var cookiesElement = 'cookiesMessage';
   var cookiesBtn = 'cookiesAccept';
-  var disturbElements = ['upButton']; // -----------------------
+  var disturbElements = []; // -----------------------
   // End config
 
   cookies = document.getElementById(cookiesElement);
@@ -4095,7 +4095,7 @@ newRangeSlider.didChanged = function (min, max) {
           <input type="file" class="hidden file" />
           <span class="file__name">Select a file</span>
       </label>
-       IMPORTANTE! El input i el nombre deben estar enmarcados con un label.
+        IMPORTANTE! El input i el nombre deben estar enmarcados con un label.
       */
 
   var inputs = ".file";
@@ -4130,7 +4130,7 @@ newRangeSlider.didChanged = function (min, max) {
 
   /*  Este script sirve para poner la clase header-fixed en el header al hacer scroll hacia abajo y así poder
       cambiar los estilos css del header.
-       Para activarlo pon true en la variable active.
+        Para activarlo pon true en la variable active.
       */
 
   var active = false; // -----------------------
@@ -4372,22 +4372,24 @@ var rangeSlider = function rangeSlider(id) {
   // -----------------------
 
   /*  Coloca en la variable selector, la clase (con el . delante) de los elementos correspondientes de tu html ej:
-       IMPORTANTE: Hay que aplicar el atributo data-tab en estos dos elementos con el valor
+        IMPORTANTE: Hay que aplicar el atributo data-tab en estos dos elementos con el valor
       de la id (sin #) del elemento que se quiere mostrar ej:
-       <span class="tab" data-tab="tab1">Tab 1</span>
+        <span class="tab" data-tab="tab1">Tab 1</span>
       <span class="tab" data-tab="tab2">Tab 2</span>
-       Coloca en la variable selectorContent, la clase (con el . delante) de los elementos correspondientes de tu html ej:
-       <div id="tab1" class="tab-content">...</div>
+        Coloca en la variable selectorContent, la clase (con el . delante) de los elementos correspondientes de tu html ej:
+        <div id="tab1" class="tab-content">...</div>
       <div id="tab2" class="tab-content">...</div>
-       Ha estos dos elementos se les aplicará la clase "active" para el cambio de estado que puedes
+        Ha estos dos elementos se les aplicará la clase "active" para el cambio de estado que puedes
       modificar con tu css.
       */
 
   var selectorTab = '.tab';
+  var selectorTabSelect = '.tab-select';
   var selectorContent = '.tab-content'; // -----------------------
   // End config
 
   var tabs = document.querySelectorAll(selectorTab);
+  var tabsSelect = document.querySelectorAll(selectorTabSelect);
   var tabsContent = document.querySelectorAll(selectorContent);
   tabs.forEach(function (tab) {
     tab.addEventListener("click", function (event) {
@@ -4404,7 +4406,16 @@ var rangeSlider = function rangeSlider(id) {
         content.classList.remove("active");
       }); // add class active in current tabcontent
 
-      document.getElementById(dataTab).classList.remove("active");
+      document.getElementById(dataTab).classList.add("active");
+      var text = tab.parentElement.parentElement.getElementsByTagName('span');
+      console.log(text);
+    });
+  });
+  tabsSelect.forEach(function (select) {
+    select.addEventListener('click', function (event) {
+      event.preventDefault();
+      var content = select.nextElementSibling;
+      content.classList.toggle('hidden');
     });
   });
 })(window);
@@ -4426,7 +4437,7 @@ var rangeSlider = function rangeSlider(id) {
 
   /*  Coloca en la variable selector, el id (sin #) del elemento correspondientes de tu html ej:
       <span class="" id="upButton">Contacto</span>
-       Puedes seleccionar la duración de la animación en milisegundos en la variable duration.
+        Puedes seleccionar la duración de la animación en milisegundos en la variable duration.
       Puedes hacer que en el top de la página, el botón desaparezca colocando un true en la variable disableOnTop.
       */
 
@@ -4492,8 +4503,8 @@ var rangeSlider = function rangeSlider(id) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/albert/Documents/Webs/@tailwind-boilerplate/src/js/app.js */"./src/js/app.js");
-module.exports = __webpack_require__(/*! /Users/albert/Documents/Webs/@tailwind-boilerplate/src/css/app.sass */"./src/css/app.sass");
+__webpack_require__(/*! C:\Users\Albert\Documents\Utilities\tailwindcss-test\src\js\app.js */"./src/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Albert\Documents\Utilities\tailwindcss-test\src\css\app.sass */"./src/css/app.sass");
 
 
 /***/ })

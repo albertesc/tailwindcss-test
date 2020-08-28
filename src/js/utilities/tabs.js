@@ -21,11 +21,13 @@
         */
 
     let selectorTab = '.tab';
+    let selectorTabSelect = '.tab-select'
     let selectorContent = '.tab-content'
     // -----------------------
     // End config
 
     let tabs = document.querySelectorAll(selectorTab);
+    let tabsSelect = document.querySelectorAll(selectorTabSelect);
     let tabsContent = document.querySelectorAll(selectorContent);
 
     tabs.forEach(tab => {
@@ -46,7 +48,20 @@
                 content.classList.remove("active");
             });
             // add class active in current tabcontent
-            document.getElementById(dataTab).classList.remove("active");
+            document.getElementById(dataTab).classList.add("active");
+
+            let text = tab.parentElement.parentElement.getElementsByTagName('span');
+            console.log(text);
         });
+    });
+
+    tabsSelect.forEach(select => {
+        select.addEventListener('click', event => {
+            event.preventDefault();
+
+            let content = select.nextElementSibling;
+
+            content.classList.toggle('hidden');
+        })
     });
 })(window);

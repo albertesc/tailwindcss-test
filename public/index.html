@@ -4,7 +4,7 @@
 <head>
     <title>@Tailwindcss UI</title>
     <link rel="stylesheet" href="css/app.css">
-
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <style>
         #menu {
             left: -100%;
@@ -75,6 +75,9 @@
                         </a>
                         <a href="#accordion" class="anchor ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">
                             Accordion
+                        </a>
+                        <a href="#tabs" class="anchor ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">
+                            Tabs
                         </a>
                         <a href="#sections" class="anchor ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">
                             Sections
@@ -680,6 +683,32 @@
                 <div class="accordion__content overflow-hidden max-h-0 px-4 transition-all duration-500 ease-in-out">
                     <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TABS -->
+    <!-- ---------------------------------------------- -->
+    <section class="py-8" id="tabs">
+        <div class="container mx-auto px-8">
+            <h2 class="text-lg text-gray-600 font-medium uppercase">Tabs</h2>
+
+            <div class="relative">
+                <div class="tab-select relative md:hidden px-5 py-3 bg-white border border-solid border-gray-300 rounded-md">
+                    <span>Tab 1</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="absolute right-0 top-0 mt-2 mr-2 text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_arrow_select" xlink:href="icons/icons.svg#icon_arrow_select"/></svg>
+                </div>
+                <div class="hidden absolute flex flex-col space-y-3 w-full p-5 mt-2 bg-white rounded-md shadow-md">
+                    <span class="tab" data-tab="tab1">Tab 1</span>
+                    <span class="tab" data-tab="tab2">Tab 2</span>
+                    <span class="tab" data-tab="tab3">Tab 3</span>
+                </div>
+            </div>
+
+            <div>
+                <div class="tab-content py-4 active" id="tab1">Tab 1</div>
+                <div class="tab-content py-4" id="tab2">Tab 2</div>
+                <div class="tab-content py-4" id="tab3">Tab 3</div>
             </div>
         </div>
     </section>
