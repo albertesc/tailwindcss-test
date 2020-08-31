@@ -107,7 +107,8 @@ module.exports = {
         require("tailwindcss-buttons")({
             sizes: true
         }),
-        require("./plugins/headerFixed")(),
+        require("./plugins/classHeaderFixed")(),
+        require("./plugins/classActive")(),
     ],
     purge: [
         './public/**/*.html',

@@ -21,8 +21,9 @@
         */
 
     let selectorTab = '.tab';
-    let selectorTabSelect = '.tab-select'
-    let selectorContent = '.tab-content'
+    let selectorContent = '.tab-content';
+    let selectorTabSelect = '.tab-select';
+    let activeClass = 'active';
     // -----------------------
     // End config
 
@@ -38,20 +39,24 @@
 
             // remove tab clases active
             tabs.forEach(tabItem => {
-                tabItem.classList.remove("active");
+                tabItem.classList.remove(activeClass);
             });
             // add class active in current tab
-            tab.classList.add("active");
+            tab.classList.add(activeClass);
 
             // remove tabcontent clases active
             tabsContent.forEach(content => {
-                content.classList.remove("active");
+                content.classList.remove(activeClass);
             });
             // add class active in current tabcontent
-            document.getElementById(dataTab).classList.add("active");
+            document.getElementById(dataTab).classList.add(activeClass);
 
-            let text = tab.parentElement.parentElement.getElementsByTagName('span');
-            console.log(text);
+            // change text selector mobile
+            let text = tab.innerHTML;
+            tab.parentElement.parentElement.querySelector(selectorTabSelect).querySelector('span').innerText = text;
+
+            // close tabs selector mobile
+            tab.parentElement.classList.toggle(activeClass);
         });
     });
 
@@ -61,7 +66,7 @@
 
             let content = select.nextElementSibling;
 
-            content.classList.toggle('hidden');
+            content.classList.toggle(activeClass);
         })
     });
 })(window);

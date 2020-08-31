@@ -693,22 +693,22 @@
         <div class="container mx-auto px-8">
             <h2 class="text-lg text-gray-600 font-medium uppercase">Tabs</h2>
 
-            <div class="relative">
+            <div class="tabs relative">
                 <div class="tab-select relative md:hidden px-5 py-3 bg-white border border-solid border-gray-300 rounded-md">
                     <span>Tab 1</span>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="absolute right-0 top-0 mt-2 mr-2 text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_arrow_select" xlink:href="icons/icons.svg#icon_arrow_select"/></svg>
                 </div>
-                <div class="hidden absolute flex flex-col space-y-3 w-full p-5 mt-2 bg-white rounded-md shadow-md">
-                    <span class="tab" data-tab="tab1">Tab 1</span>
-                    <span class="tab" data-tab="tab2">Tab 2</span>
-                    <span class="tab" data-tab="tab3">Tab 3</span>
+                <div class="tabs-menu absolute md:relative flex flex-col md:flex-row space-y-1 md:space-y-0 md:space-x-5 w-full p-5 md:p-0 mt-2 md:mt-0 bg-white md:bg-transparent rounded-md shadow-md md:shadow-none">
+                    <span class="tab px-3 py-1 rounded active:bg-gray-300 active" data-tab="tab1">Tab 1</span>
+                    <span class="tab px-3 py-1 rounded active:bg-gray-300" data-tab="tab2">Tab 2</span>
+                    <span class="tab px-3 py-1 rounded active:bg-gray-300" data-tab="tab3">Tab 3</span>
                 </div>
             </div>
 
             <div>
-                <div class="tab-content py-4 active" id="tab1">Tab 1</div>
-                <div class="tab-content py-4" id="tab2">Tab 2</div>
-                <div class="tab-content py-4" id="tab3">Tab 3</div>
+                <div class="tab-content mt-4 p-5 bg-white rounded active" id="tab1">Tab 1</div>
+                <div class="tab-content mt-4 p-5 bg-white rounded" id="tab2">Tab 2</div>
+                <div class="tab-content mt-4 p-5 bg-white rounded" id="tab3">Tab 3</div>
             </div>
         </div>
     </section>

@@ -4384,8 +4384,9 @@ var rangeSlider = function rangeSlider(id) {
       */
 
   var selectorTab = '.tab';
+  var selectorContent = '.tab-content';
   var selectorTabSelect = '.tab-select';
-  var selectorContent = '.tab-content'; // -----------------------
+  var activeClass = 'active'; // -----------------------
   // End config
 
   var tabs = document.querySelectorAll(selectorTab);
@@ -4397,25 +4398,28 @@ var rangeSlider = function rangeSlider(id) {
       var dataTab = tab.getAttribute("data-tab"); // remove tab clases active
 
       tabs.forEach(function (tabItem) {
-        tabItem.classList.remove("active");
+        tabItem.classList.remove(activeClass);
       }); // add class active in current tab
 
-      tab.classList.add("active"); // remove tabcontent clases active
+      tab.classList.add(activeClass); // remove tabcontent clases active
 
       tabsContent.forEach(function (content) {
-        content.classList.remove("active");
+        content.classList.remove(activeClass);
       }); // add class active in current tabcontent
 
-      document.getElementById(dataTab).classList.add("active");
-      var text = tab.parentElement.parentElement.getElementsByTagName('span');
-      console.log(text);
+      document.getElementById(dataTab).classList.add(activeClass); // change text selector mobile
+
+      var text = tab.innerHTML;
+      tab.parentElement.parentElement.querySelector(selectorTabSelect).querySelector('span').innerText = text; // close tabs selector mobile
+
+      tab.parentElement.classList.toggle(activeClass);
     });
   });
   tabsSelect.forEach(function (select) {
     select.addEventListener('click', function (event) {
       event.preventDefault();
       var content = select.nextElementSibling;
-      content.classList.toggle('hidden');
+      content.classList.toggle(activeClass);
     });
   });
 })(window);

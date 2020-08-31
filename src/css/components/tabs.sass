@@ -1,0 +1,17 @@
+.tabs
+    .tabs-menu
+        @apply hidden
+
+        &.active
+            @apply flex
+    
+.tab-content
+    @apply hidden
+
+    &.active
+        @apply block
+    
+@screen md
+    .tabs
+        .tabs-menu
+            @apply flex
