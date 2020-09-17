@@ -3803,6 +3803,8 @@ __webpack_require__(/*! ./utilities/file */ "./src/js/utilities/file.js");
 
 __webpack_require__(/*! ./utilities/header */ "./src/js/utilities/header.js");
 
+__webpack_require__(/*! ./utilities/search */ "./src/js/utilities/search.js");
+
 __webpack_require__(/*! ./utilities/tabs */ "./src/js/utilities/tabs.js");
 
 __webpack_require__(/*! ./utilities/up */ "./src/js/utilities/up.js");
@@ -4355,6 +4357,28 @@ var rangeSlider = function rangeSlider(id) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (rangeSlider);
+
+/***/ }),
+
+/***/ "./src/js/utilities/search.js":
+/*!************************************!*\
+  !*** ./src/js/utilities/search.js ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+;
+
+(function (window, undefined) {
+  'strict mode';
+
+  var buttonSelector = 'searchButton';
+  var formSelector = 'headerSearch';
+  var searchButton = document.getElementById(buttonSelector);
+  searchButton.addEventListener('click', function () {
+    document.getElementById(formSelector).classList.toggle('active');
+  });
+})(window);
 
 /***/ }),
 

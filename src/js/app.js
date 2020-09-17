@@ -5,6 +5,7 @@ require("./utilities/collapse");
 require("./utilities/cookies");
 require("./utilities/file");
 require("./utilities/header");
+require("./utilities/search");
 require("./utilities/tabs");
 require("./utilities/up");
 

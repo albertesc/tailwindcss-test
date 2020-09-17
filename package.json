@@ -27,5 +27,8 @@
     "vue-template-compiler": "^2.6.11"
   },
   "author": "Albert Escamilla",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "rellax": "^1.12.1"
+  }
 }

@@ -4,7 +4,7 @@
 <head>
     <title>@Tailwindcss UI</title>
     <link rel="stylesheet" href="css/app.css">
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1" name="viewport">
     <style>
         #menu {
             left: -100%;
@@ -35,7 +35,7 @@
 
 <body>
     <header>
-        <nav id="menu" class="fixed top-0 left-0 max-w-xs w-full h-screen overflow-y-scroll bg-primary-900 z-50">
+        <nav id="menu" class="fixed top-0 left-0 max-w-xs w-full h-screen overflow-y-scroll bg-primary-900 z-40">
             <div class="flex justify-end">
                 <svg id="menuClose" data-toggle="menu" viewBox="0 0 32 32" fill="none" stroke="currentColor" class="text-white w-6 h-6 mt-4 mr-4 cursor-pointer" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M2 30 L30 2 M30 30 L2 2" />
@@ -43,7 +43,7 @@
             </div>
         </nav>
 
-        <nav class="fixed top-0 left-0 w-full bg-gray-800 z-40">
+        <nav class="top-0 left-0 w-full bg-gray-800 z-30">
             <div class="container mx-auto px-8">
                 <div class="flex justify-between h-16">
                     <div class="flex items-center">
@@ -63,6 +63,12 @@
                         </a>
                         <a href="#breadcrumb" class="anchor ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">
                             Breadcrumb
+                        </a>
+                        <a href="#forms" class="anchor ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">
+                            Forms
+                        </a>
+                        <a href="#search" class="anchor ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">
+                            Search
                         </a>
                         <a href="#file" class="anchor ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">
                             File Input
@@ -104,14 +110,14 @@
 
         <div data-glide-el="controls">
             <span data-glide-dir="<" class="absolute top-1/2 transform -translate-y-1/2 left-0 ml-5 cursor-pointer">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"><use href="icons/icons.svg#icon_left" xlink:href="icons/icons.svg#icon_left"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-7 h-7"><use href="icons/icons.svg#left" xlink:href="icons/icons.svg#left"/></svg>
             </span>
-            <span data-glide-dir=">" class="absolute top-1/2 transform -translate-y-1/2 right-0 mr-5 cursor-pointer">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"><use href="icons/icons.svg#icon_right" xlink:href="icons/icons.svg#icon_right"/></svg>
+            <span data-glide-dir=">" class="absolute top-1icon /2 transform -translate-y-1/2 right-0 mr-5 cursor-pointer">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-7 h-7"><use href="icons/icons.svg#right" xlink:href="icons/icons.svg#right"/></svg>
             </span>
         </div>
 
-        <div data-glide-el="controls[nav]" class="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex space-x-3 mb-5">
+        <div data-glide-el="controlsicon [nav]" class="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex space-x-3 mb-5">
             <span data-glide-dir="=0" class="block w-3 h-3 border-2 border-gray-400 rounded-full cursor-pointer"></span>
             <span data-glide-dir="=1" class="block w-3 h-3 border-2 border-gray-400 rounded-full cursor-pointer"></span>
             <span data-glide-dir="=2" class="block w-3 h-3 border-2 border-gray-400 rounded-full cursor-pointer"></span>
@@ -218,310 +224,310 @@
            
             <div class="flex flex-wrap -mx-2">
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_search', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_search" xlink:href="icons/icons.svg#icon_search"/></svg>
-                        <pre class="hidden" id="copy-icon_search">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_search" xlink:href="icons/icons.svg#icon_search"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-adjust', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#adjust" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-adjust">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#adjust" xlink:href="icons/icons.svg#adjust"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_close', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_close" xlink:href="icons/icons.svg#icon_close"/></svg>
-                        <pre class="hidden" id="copy-icon_close">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_close" xlink:href="icons/icons.svg#icon_close"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-arrow', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#arrow" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-arrow">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#arrow" xlink:href="icons/icons.svg#arrow"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_menu', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_menu" xlink:href="icons/icons.svg#icon_menu"/></svg>
-                        <pre class="hidden" id="copy-icon_menu">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_menu" xlink:href="icons/icons.svg#icon_menu"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-attach', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#attach" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-attach">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#attach" xlink:href="icons/icons.svg#attach"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_minus', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_minus" xlink:href="icons/icons.svg#icon_minus"/></svg>
-                        <pre class="hidden" id="copy-icon_minus">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_minus" xlink:href="icons/icons.svg#icon_minus"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-bag', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#bag" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-bag">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#bag" xlink:href="icons/icons.svg#bag"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_plus', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_plus" xlink:href="icons/icons.svg#icon_plus"/></svg>
-                        <pre class="hidden" id="copy-icon_plus">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_plus" xlink:href="icons/icons.svg#icon_plus"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-cart', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#cart" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-cart">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#cart" xlink:href="icons/icons.svg#cart"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_up', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_up" xlink:href="icons/icons.svg#icon_up"/></svg>
-                        <pre class="hidden" id="copy-icon_up">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_up" xlink:href="icons/icons.svg#icon_up"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-check', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#check" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-check">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#check" xlink:href="icons/icons.svg#check"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_down', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_down" xlink:href="icons/icons.svg#icon_down"/></svg>
-                        <pre class="hidden" id="copy-icon_down">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_down" xlink:href="icons/icons.svg#icon_down"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-check_active', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#check_active" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-check_active">&lt;svg xmlns="http://www.w3.org/2000/svg"icon  class="stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#check_active" xlink:href="icons/icons.svg#check_active"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_right', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_right" xlink:href="icons/icons.svg#icon_right"/></svg>
-                        <pre class="hidden" id="copy-icon_right">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_right" xlink:href="icons/icons.svg#icon_right"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-close', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#close" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-close">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#close" xlink:href="icons/icons.svg#close"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_left', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_left" xlink:href="icons/icons.svg#icon_left"/></svg>
-                        <pre class="hidden" id="copy-icon_left">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_left" xlink:href="icons/icons.svg#icon_left"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-copy', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#copy" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-copy">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#copy" xlink:href="icons/icons.svg#copy"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_ok', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_ok" xlink:href="icons/icons.svg#icon_ok"/></svg>
-                        <pre class="hidden" id="copy-icon_ok">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_ok" xlink:href="icons/icons.svg#icon_ok"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-down', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#down" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-down">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#down" xlink:href="icons/icons.svg#down"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_arrow', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_arrow" xlink:href="icons/icons.svg#icon_arrow"/></svg>
-                        <pre class="hidden" id="copy-icon_arrow">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_arrow" xlink:href="icons/icons.svg#icon_arrow"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-download', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#download" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-download">&lt;svg xmlns="http://www.w3.org/2000/svg" classicon ="stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#download" xlink:href="icons/icons.svg#download"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_download', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_download" xlink:href="icons/icons.svg#icon_download"/></svg>
-                        <pre class="hidden" id="copy-icon_download">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_download" xlink:href="icons/icons.svg#icon_download"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-down_sm', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#down_sm" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-down_sm">&lt;svg xmlns="http://www.w3.org/2000/svg" classicon ="stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#down_sm" xlink:href="icons/icons.svg#down_sm"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_upload', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_upload" xlink:href="icons/icons.svg#icon_upload"/></svg>
-                        <pre class="hidden" id="copy-icon_upload">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_upload" xlink:href="icons/icons.svg#icon_upload"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-edit', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#edit" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-edit">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#edit" xlink:href="icons/icons.svg#edit"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_exit', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_exit" xlink:href="icons/icons.svg#icon_exit"/></svg>
-                        <pre class="hidden" id="copy-icon_exit">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_exit" xlink:href="icons/icons.svg#icon_exit"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-error', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#error" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-error">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#error" xlink:href="icons/icons.svg#error"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_copy', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_copy" xlink:href="icons/icons.svg#icon_copy"/></svg>
-                        <pre class="hidden" id="copy-icon_copy">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_copy" xlink:href="icons/icons.svg#icon_copy"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-exit', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#exit" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-exit">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#exit" xlink:href="icons/icons.svg#exit"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_attach', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_attach" xlink:href="icons/icons.svg#icon_attach"/></svg>
-                        <pre class="hidden" id="copy-icon_attach">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_attach" xlink:href="icons/icons.svg#icon_attach"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-hand_down', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#hand_down" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-hand_down">&lt;svg xmlns="http://www.w3.org/2000/svg"icon  class="stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#hand_down" xlink:href="icons/icons.svg#hand_down"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_bag', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_bag" xlink:href="icons/icons.svg#icon_bag"/></svg>
-                        <pre class="hidden" id="copy-icon_bag">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_bag" xlink:href="icons/icons.svg#icon_bag"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-hand_up', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#hand_up" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-hand_up">&lt;svg xmlns="http://www.w3.org/2000/svg" classicon ="stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#hand_up" xlink:href="icons/icons.svg#hand_up"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_user', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_user" xlink:href="icons/icons.svg#icon_user"/></svg>
-                        <pre class="hidden" id="copy-icon_user">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_user" xlink:href="icons/icons.svg#icon_user"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-info', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#info" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-info">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#info" xlink:href="icons/icons.svg#info"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_list', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_list" xlink:href="icons/icons.svg#icon_list"/></svg>
-                        <pre class="hidden" id="copy-icon_list">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_list" xlink:href="icons/icons.svg#icon_list"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-left', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#left" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-left">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#left" xlink:href="icons/icons.svg#left"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_phone', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_phone" xlink:href="icons/icons.svg#icon_phone"/></svg>
-                        <pre class="hidden" id="copy-icon_phone">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_phone" xlink:href="icons/icons.svg#icon_phone"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-list', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#list" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-list">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#list" xlink:href="icons/icons.svg#list"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_mail', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_mail" xlink:href="icons/icons.svg#icon_mail"/></svg>
-                        <pre class="hidden" id="copy-icon_mail">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_mail" xlink:href="icons/icons.svg#icon_mail"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-lock', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#lock" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-lock">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#lock" xlink:href="icons/icons.svg#lock"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_placeholder', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_placeholder" xlink:href="icons/icons.svg#icon_placeholder"/></svg>
-                        <pre class="hidden" id="copy-icon_placeholder">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_placeholder" xlink:href="icons/icons.svg#icon_placeholder"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-mail', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#mail" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-mail">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#mail" xlink:href="icons/icons.svg#mail"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_send', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_send" xlink:href="icons/icons.svg#icon_send"/></svg>
-                        <pre class="hidden" id="copy-icon_send">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_send" xlink:href="icons/icons.svg#icon_send"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-menu', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#menu" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-menu">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#menu" xlink:href="icons/icons.svg#menu"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_print', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_print" xlink:href="icons/icons.svg#icon_print"/></svg>
-                        <pre class="hidden" id="copy-icon_print">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_print" xlink:href="icons/icons.svg#icon_print"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-minus', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#minus" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-minus">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#minus" xlink:href="icons/icons.svg#minus"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_adjust', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_adjust" xlink:href="icons/icons.svg#icon_adjust"/></svg>
-                        <pre class="hidden" id="copy-icon_adjust">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_adjust" xlink:href="icons/icons.svg#icon_adjust"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-ok', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#ok" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-ok">&lt;svg xmlns="http://www.w3.org/2000/svg" class="strokeicon -current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#ok" xlink:href="icons/icons.svg#ok"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_trash', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_trash" xlink:href="icons/icons.svg#icon_trash"/></svg>
-                        <pre class="hidden" id="copy-icon_trash">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_trash" xlink:href="icons/icons.svg#icon_trash"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-phone', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#phone" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-phone">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#phone" xlink:href="icons/icons.svg#phone"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_success', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_success" xlink:href="icons/icons.svg#icon_success"/></svg>
-                        <pre class="hidden" id="copy-icon_success">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_success" xlink:href="icons/icons.svg#icon_success"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-placeholder', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#placeholder" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-placeholder">&lt;svg xmlns="http://www.w3.org/2000/svg"icon  class="stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#placeholder" xlink:href="icons/icons.svg#placeholder"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_error', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_error" xlink:href="icons/icons.svg#icon_error"/></svg>
-                        <pre class="hidden" id="copy-icon_error">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_error" xlink:href="icons/icons.svg#icon_error"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-plus', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#plus" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-plus">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#plus" xlink:href="icons/icons.svg#plus"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_warning', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_warning" xlink:href="icons/icons.svg#icon_warning"/></svg>
-                        <pre class="hidden" id="copy-icon_warning">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_warning" xlink:href="icons/icons.svg#icon_warning"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-print', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#print" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-print">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#print" xlink:href="icons/icons.svg#print"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_info', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_info" xlink:href="icons/icons.svg#icon_info"/></svg>
-                        <pre class="hidden" id="copy-icon_info">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_info" xlink:href="icons/icons.svg#icon_info"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-radio', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#radio" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-radio">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#radio" xlink:href="icons/icons.svg#radio"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_radiobtn', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_radiobtn" xlink:href="icons/icons.svg#icon_radiobtn"/></svg>
-                        <pre class="hidden" id="copy-icon_radiobtn">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_radiobtn" xlink:href="icons/icons.svg#icon_radiobtn"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-radio_active', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#radio_active" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-radio_active">&lt;svg xmlns="http://www.w3.org/2000/svg"icon  class="stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#radio_active" xlink:href="icons/icons.svg#radio_active"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_radiobtnactive', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_radiobtnactive" xlink:href="icons/icons.svg#icon_radiobtnactive"/></svg>
-                        <pre class="hidden" id="copy-icon_radiobtnactive">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_radiobtnactive" xlink:href="icons/icons.svg#icon_radiobtnactive"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-review', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#review" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-review">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#review" xlink:href="icons/icons.svg#review"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_check', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_check" xlink:href="icons/icons.svg#icon_check"/></svg>
-                        <pre class="hidden" id="copy-icon_check">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_check" xlink:href="icons/icons.svg#icon_check"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-right', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#right" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-right">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#right" xlink:href="icons/icons.svg#right"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_checkactive', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_checkactive" xlink:href="icons/icons.svg#icon_checkactive"/></svg>
-                        <pre class="hidden" id="copy-icon_checkactive">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_checkactive" xlink:href="icons/icons.svg#icon_checkactive"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-search', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#search" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-search">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#search" xlink:href="icons/icons.svg#search"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_edit', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_edit" xlink:href="icons/icons.svg#icon_edit"/></svg>
-                        <pre class="hidden" id="copy-icon_edit">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_edit" xlink:href="icons/icons.svg#icon_edit"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-send', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#send" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-send">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#send" xlink:href="icons/icons.svg#send"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_wishlist', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_wishlist" xlink:href="icons/icons.svg#icon_wishlist"/></svg>
-                        <pre class="hidden" id="copy-icon_wishlist">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_wishlist" xlink:href="icons/icons.svg#icon_wishlist"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-star', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#star" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-star">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#star" xlink:href="icons/icons.svg#star"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_review', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_review" xlink:href="icons/icons.svg#icon_review"/></svg>
-                        <pre class="hidden" id="copy-icon_review">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_review" xlink:href="icons/icons.svg#icon_review"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-success', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#success" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-success">&lt;svg xmlns="http://www.w3.org/2000/svg" classicon ="stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#success" xlink:href="icons/icons.svg#success"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_star', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_star" xlink:href="icons/icons.svg#icon_star"/></svg>
-                        <pre class="hidden" id="copy-icon_star">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_star" xlink:href="icons/icons.svg#icon_star"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-trash', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#trash" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-trash">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#trash" xlink:href="icons/icons.svg#trash"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_hand_up', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_hand_up" xlink:href="icons/icons.svg#icon_hand_up"/></svg>
-                        <pre class="hidden" id="copy-icon_hand_up">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_hand_up" xlink:href="icons/icons.svg#icon_hand_up"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-up', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#up" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-up">&lt;svg xmlns="http://www.w3.org/2000/svg" class="strokeicon -current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#up" xlink:href="icons/icons.svg#up"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_hand_down', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_hand_down" xlink:href="icons/icons.svg#icon_hand_down"/></svg>
-                        <pre class="hidden" id="copy-icon_hand_down">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_hand_down" xlink:href="icons/icons.svg#icon_hand_down"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-upload', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#upload" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-upload">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#upload" xlink:href="icons/icons.svg#upload"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_arrow_select', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_arrow_select" xlink:href="icons/icons.svg#icon_arrow_select"/></svg>
-                        <pre class="hidden" id="copy-icon_arrow_select">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_arrow_select" xlink:href="icons/icons.svg#icon_arrow_select"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-up_sm', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#up_sm" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-up_sm">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#up_sm" xlink:href="icons/icons.svg#up_sm"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_phone_sm', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_phone_sm" xlink:href="icons/icons.svg#icon_phone_sm"/></svg>
-                        <pre class="hidden" id="copy-icon_phone_sm">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_phone_sm" xlink:href="icons/icons.svg#icon_phone_sm"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-user', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#user" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-user">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#user" xlink:href="icons/icons.svg#user"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_mail_sm', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_mail_sm" xlink:href="icons/icons.svg#icon_mail_sm"/></svg>
-                        <pre class="hidden" id="copy-icon_mail_sm">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_mail_sm" xlink:href="icons/icons.svg#icon_mail_sm"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-warning', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#warning" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-warning">&lt;svg xmlns="http://www.w3.org/2000/svg" classicon ="stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#warning" xlink:href="icons/icons.svg#warning"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_placeholder_sm', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_placeholder_sm" xlink:href="icons/icons.svg#icon_placeholder_sm"/></svg>
-                        <pre class="hidden" id="copy-icon_placeholder_sm">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_placeholder_sm" xlink:href="icons/icons.svg#icon_placeholder_sm"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-wishlist', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#wishlist" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-wishlist">&lt;svg xmlns="http://www.w3.org/2000/svg" classicon ="stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#wishlist" xlink:href="icons/icons.svg#wishlist"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
@@ -530,51 +536,51 @@
             <small class="mb-3 mt-8">Social icons</small>
             <div class="flex flex-wrap -mx-2">
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_facebook', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_facebook" xlink:href="icons/icons.svg#icon_facebook"/></svg>
-                        <pre class="hidden" id="copy-icon_facebook">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_facebook" xlink:href="icons/icons.svg#icon_facebook"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-facebook', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#facebook" xlink:href="icons/icons.svg#facebook"/></svg>
+                        <pre class="hidden" id="copy-facebook">&lt;svg xmlns="http://www.w3.org/2000/svg" classicon ="stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#facebook" xlink:href="icons/icons.svg#facebook"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_twitter', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_twitter" xlink:href="icons/icons.svg#icon_twitter"/></svg>
-                        <pre class="hidden" id="copy-icon_twitter">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_twitter" xlink:href="icons/icons.svg#icon_twitter"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-twitter', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#twitter" xlink:href="icons/icons.svg#twitter"/></svg>
+                        <pre class="hidden" id="copy-twitter">&lt;svg xmlns="http://www.w3.org/2000/svg" classicon ="stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#twitter" xlink:href="icons/icons.svg#twitter"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_pinterest', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_pinterest" xlink:href="icons/icons.svg#icon_pinterest"/></svg>
-                        <pre class="hidden" id="copy-icon_pinterest">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_pinterest" xlink:href="icons/icons.svg#icon_pinterest"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-pinterest', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#pinterest" xlink:href="icons/icons.svg#pinterest"/></svg>
+                        <pre class="hidden" id="copy-pinterest">&lt;svg xmlns="http://www.w3.org/2000/svg"icon  class="stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#pinterest" xlink:href="icons/icons.svg#pinterest"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_linkedin', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_linkedin" xlink:href="icons/icons.svg#icon_linkedin"/></svg>
-                        <pre class="hidden" id="copy-icon_linkedin">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_linkedin" xlink:href="icons/icons.svg#icon_linkedin"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-linkedin', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#linkedin" xlink:href="icons/icons.svg#linkedin"/></svg>
+                        <pre class="hidden" id="copy-linkedin">&lt;svg xmlns="http://www.w3.org/2000/svg" classicon ="stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#linkedin" xlink:href="icons/icons.svg#linkedin"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_youtube', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_youtube" xlink:href="icons/icons.svg#icon_youtube"/></svg>
-                        <pre class="hidden" id="copy-icon_youtube">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_youtube" xlink:href="icons/icons.svg#icon_youtube"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-youtube', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#youtube" xlink:href="icons/icons.svg#youtube"/></svg>
+                        <pre class="hidden" id="copy-youtube">&lt;svg xmlns="http://www.w3.org/2000/svg" classicon ="stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#youtube" xlink:href="icons/icons.svg#youtube"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_instagram', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_instagram" xlink:href="icons/icons.svg#icon_instagram"/></svg>
-                        <pre class="hidden" id="copy-icon_instagram">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_instagram" xlink:href="icons/icons.svg#icon_instagram"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-instagram', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#instagram" xlink:href="icons/icons.svg#instagram"/></svg>
+                        <pre class="hidden" id="copy-instagram">&lt;svg xmlns="http://www.w3.org/2000/svg"icon  class="stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#instagram" xlink:href="icons/icons.svg#instagram"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-icon_whatsapp', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_whatsapp" xlink:href="icons/icons.svg#icon_whatsapp"/></svg>
-                        <pre class="hidden" id="copy-icon_whatsapp">&lt;svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="text-gray-700 group-hover:text-white w-7 h-7"&gt;&lt;use href="icons/icons.svg#icon_whatsapp" xlink:href="icons/icons.svg#icon_whatsapp"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-whatsapp', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#whatsapp" xlink:href="icons/icons.svg#whatsapp"/></svg>
+                        <pre class="hidden" id="copy-whatsapp">&lt;svg xmlns="http://www.w3.org/2000/svg" classicon ="stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#whatsapp" xlink:href="icons/icons.svg#whatsapp"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
@@ -593,6 +599,78 @@
                     <a href="#" class="text-gray-700 hover:text-gray-900">Item 1</a><span class="text-gray-500">></span>
                     <a href="#" class="text-gray-700 hover:text-gray-900">Item 2</a><span class="text-gray-500">></span>
                     <span class="text-gray-500">Item 3</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FROMS -->
+    <!-- ---------------------------------------------- -->
+    <section id="forms" class="py-8">
+        <div class="container mx-auto px-8">
+            <h2 class="text-lg text-gray-600 font-medium uppercase">Forms</h2>
+
+            <div class="flex flex-wrap -mx-3">
+                <div class="w-full md:w-1/3 px-3 transform -translate-y-3">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="nombre" class="w-full">
+                </div>
+                <div class="w-full md:w-1/3 px-3 transform -translate-y-3">
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" class="w-full">
+                </div>
+                <div class="w-full md:w-1/3 px-3 transform -translate-y-3">
+                    <label for="select">Choose your option</label>
+                    <select name="select" id="select" class="w-full">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                        <option>Option 4</option>
+                    </select>
+                </div>
+
+                <div class="w-full md:w-1/3 px-3">
+                    <label for="check" class="flex items-center translate-y-0 m-0 p-0">
+                        <input type="checkbox" name="check" id="check" checked>
+                        <span class="text-gray-900 font-light text-xs">Acepto la Política de Privacidad</span>
+                    </label>
+                </div>
+
+                <div class="w-full md:w-1/3 px-3">
+                    <label for="option1" class="flex items-center translate-y-0 m-0 p-0">
+                        <input type="radio" name="radioButton" value="option1" id="option1" checked>
+                        <span class="text-gray-900 font-light text-xs">Acepto la Política de Privacidad</span>
+                    </label>
+
+                    <label for="option2" class="flex items-center translate-y-0 m-0 p-0 mt-2">
+                        <input type="radio" name="radioButton" value="option2" id="option2">
+                        <span class="text-gray-900 font-light text-xs">Acepto la Política de Privacidad</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEARCH -->
+    <!-- ---------------------------------------------- -->
+    <section id="search" class="pt-20 pb-8">
+        <div class="container mx-auto px-8">
+            <div class="flex items-stretch justify-end z-50" id="headerSearch">
+                <div class="fixed lg:relative top-0 lg:top-auto left-0 lg:left-auto lg:overflow-hidden w-full lg:w-0 lg:group-active:w-1/4 lg:mr-2 transform -translate-y-full group-active:translate-y-0 lg:translate-y-0 transition-all duration-500 ease-out">
+                    <form action="<?php echo $links['listado_productos.php'] ?>" method="get" class="flex items-stretch h-full m-2 lg:m-0 p-2 lg:p-0 bg-gray-300 lg:bg-transparent rounded lg:rounded-none">
+                        <label for="search" class="w-full">
+                            <input id="search" class="rounded-none border-none w-full" type="text" placeholder="Buscar..." />
+                        </label>
+                        <button type="submit" class="flex justify-center items-center w-12 bg-primary-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="fill-current text-white w-5 h-5"><use href="icons/icons.svg#search" xlink:href="icons/icons.svg#search"/></svg>
+                        </button>
+                    </form>
+                </div>
+                <div id="searchButton" class="w-10 h-10">
+                    <span class="flex justify-center items-center w-10 h-10 rounded-full bg-primary-500 group-active:bg-gray-300 transform group-active:scale-75 transition-all duration-300 ease-out cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="group-active:hidden fill-current text-white w-5 h-5"><use href="icons/icons.svg#search" xlink:href="icons/icons.svg#search"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="hidden group-active:block fill-current text-gray-700 w-4 h-4"><use href="icons/icons.svg#close" xlink:href="icons/icons.svg#close"/></svg>
+                    </span>
                 </div>
             </div>
         </div>
@@ -626,6 +704,25 @@
                 <div class="slider-line absolute left-0 top-0 w-full h-2 rounded-full bg-gray-300 z-0 overflow-hidden"><span class="block h-full w-0 bg-primary-500"></span></div>
             </div>
             <div id="result" class="text-center mt-5">Min: 75 Max: 225</div>
+        </div>
+    </section>
+
+    <!-- PAGINATION -->
+    <!-- ---------------------------------------------- -->
+    <section id="pagination" class="py-8">
+        <div class="container mx-auto px-8">
+            <h2 class="text-lg text-gray-600 font-medium uppercase">Pagination</h2>
+
+            <nav class="font-condensed tracking-widest">
+                <ul class="flex items-center justify-center space-y-0 list-none pl-0 my-0">
+                    <li class="mr-2 sm:mr-4 mb-0"><a href="" rel="prev" class="text-gray-500 hover:text-gray-600">Atrás</a></li>
+                    <li><a href="#" class="block sm:mx-1 px-4 py-3 sm:px-6 sm:py-4 text-gray-500 hover:text-gray-600 hover:bg-gray-300 bg-gray-300">1</a></li>
+                    <li><a href="#" class="block sm:mx-1 px-4 py-3 sm:px-6 sm:py-4 text-gray-500 hover:text-gray-600 hover:bg-gray-300">2</a></li>
+                    <li><span class="sm:mx-2">...</span></li>
+                    <li><a href="#" class="block sm:mx-1 px-4 py-3 sm:px-6 sm:py-4 text-gray-500 hover:text-gray-600 hover:bg-gray-300">12</a></li>
+                    <li class="ml-2 sm:ml-4 mb-0"><a href="" rel="next" class="text-gray-500 hover:text-gray-600">Siguiente</a></li>
+                </ul>
+            </nav>
         </div>
     </section>
 
@@ -696,7 +793,7 @@
             <div class="tabs relative">
                 <div class="tab-select relative md:hidden px-5 py-3 bg-white border border-solid border-gray-300 rounded-md">
                     <span>Tab 1</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" stroke="none" class="absolute right-0 top-0 mt-2 mr-2 text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#icon_arrow_select" xlink:href="icons/icons.svg#icon_arrow_select"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current absolute right-0 top-0 mt-2 mr-2 text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#arrow_select" xlink:href="icons/icons.svg#arrow_select"/></svg>
                 </div>
                 <div class="tabs-menu absolute md:relative flex flex-col md:flex-row space-y-1 md:space-y-0 md:space-x-5 w-full p-5 md:p-0 mt-2 md:mt-0 bg-white md:bg-transparent rounded-md shadow-md md:shadow-none">
                     <span class="tab px-3 py-1 rounded active:bg-gray-300 active" data-tab="tab1">Tab 1</span>
