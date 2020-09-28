@@ -34,7 +34,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="fixed w-full z-10">
         <nav id="menu" class="fixed top-0 left-0 max-w-xs w-full h-screen overflow-y-scroll bg-primary-900 z-40">
             <div class="flex justify-end">
                 <svg id="menuClose" data-toggle="menu" viewBox="0 0 32 32" fill="none" stroke="currentColor" class="text-white w-6 h-6 mt-4 mr-4 cursor-pointer" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -44,7 +44,7 @@
         </nav>
 
         <nav class="top-0 left-0 w-full bg-gray-800 z-30">
-            <div class="container mx-auto px-8">
+            <div class="mx-auto px-8">
                 <div class="flex justify-between h-16">
                     <div class="flex items-center">
                         <span class="pr-3">
@@ -66,6 +66,9 @@
                         </a>
                         <a href="#forms" class="anchor ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">
                             Forms
+                        </a>
+                        <a href="#tables" class="anchor ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">
+                            Tables
                         </a>
                         <a href="#search" class="anchor ml-4 px-3 py-2 rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">
                             Search
@@ -112,7 +115,7 @@
             <span data-glide-dir="<" class="absolute top-1/2 transform -translate-y-1/2 left-0 ml-5 cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-7 h-7"><use href="icons/icons.svg#left" xlink:href="icons/icons.svg#left"/></svg>
             </span>
-            <span data-glide-dir=">" class="absolute top-1icon /2 transform -translate-y-1/2 right-0 mr-5 cursor-pointer">
+            <span data-glide-dir=">" class="absolute top-1/2 transform -translate-y-1/2 right-0 mr-5 cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-7 h-7"><use href="icons/icons.svg#right" xlink:href="icons/icons.svg#right"/></svg>
             </span>
         </div>
@@ -434,9 +437,9 @@
                     </div>
                 </div>
                 <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-radio_active', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#radio_active" xlink:href="icons/icons.svg#*"/></svg>
-                        <pre class="hidden" id="copy-radio_active">&lt;svg xmlns="http://www.w3.org/2000/svg"icon  class="stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#radio_active" xlink:href="icons/icons.svg#radio_active"/&gt;&lt;/svg&gt;</pre>
+                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-success', this);">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#success" xlink:href="icons/icons.svg#*"/></svg>
+                        <pre class="hidden" id="copy-success">&lt;svg xmlns="http://www.w3.org/2000/svg" classicon ="stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#success" xlink:href="icons/icons.svg#success"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
@@ -472,13 +475,6 @@
                     <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-star', this);">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#star" xlink:href="icons/icons.svg#*"/></svg>
                         <pre class="hidden" id="copy-star">&lt;svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#star" xlink:href="icons/icons.svg#star"/&gt;&lt;/svg&gt;</pre>
-                        <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
-                    </div>
-                </div>
-                <div class="px-2 mb-4">
-                    <div class="group relative p-4 bg-gray-300 hover:bg-gray-900 rounded cursor-pointer" onclick="copyToClipboard('copy-success', this);">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon stroke-current text-gray-700 group-hover:text-white w-8 h-8"><use href="icons/icons.svg#success" xlink:href="icons/icons.svg#*"/></svg>
-                        <pre class="hidden" id="copy-success">&lt;svg xmlns="http://www.w3.org/2000/svg" classicon ="stroke-current text-black w-6 h-6"&gt;&lt;use href="icons/icons.svg#success" xlink:href="icons/icons.svg#success"/&gt;&lt;/svg&gt;</pre>
                         <small class="absolute hidden bottom-0 left-1/2 transform -translate-x-1/2 mb-1 px-2 py-0 bg-gray-600 bg-opacity-50 text-white rounded-sm">copied!</small>
                     </div>
                 </div>
@@ -648,6 +644,32 @@
                     </label>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- FROMS -->
+    <!-- ---------------------------------------------- -->
+    <section id="tables" class="py-8">
+        <div class="container mx-auto px-8">
+            <h2 class="text-lg text-gray-600 font-medium uppercase">Tables</h2>
+
+            <table>
+                <tr>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Age</th>
+                </tr>
+                <tr>
+                    <td>Jill</td>
+                    <td>Smith</td>
+                    <td>50</td>
+                </tr>
+                <tr>
+                    <td>Eve</td>
+                    <td>Jackson</td>
+                    <td>94</td>
+                </tr>
+            </table>
         </div>
     </section>
 

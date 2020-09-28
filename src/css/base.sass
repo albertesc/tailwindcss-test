@@ -164,10 +164,29 @@ select
 // -----------------------
 label
 	@apply block text-gray-600 text-xs font-medium uppercase leading-relaxed
-	
+
+
+/*  Table styles
+	*/
+		
+table
+	@apply w-full
+
+	tr:first-child
+		@apply bg-gray-300
+
+	th
+		@apply text-left font-bold text-gray-600 px-5 py-3
+
+	tr
+		@apply border-b border-solid border-gray-300
+
+	td
+		@apply text-left font-normal px-5 py-3
+
 
 /*  Icons
 	*/
 
 .icon
-	@apply stroke-1
+	stroke-width: 1px

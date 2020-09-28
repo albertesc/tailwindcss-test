@@ -12,7 +12,7 @@
 
     let cookiesElement = 'cookiesMessage';
     let cookiesBtn = 'cookiesAccept';
-    let disturbElements = [];
+    let disturbElements = ["upButton"];
     // -----------------------
     // End config
 

@@ -4050,7 +4050,7 @@ newRangeSlider.didChanged = function (min, max) {
 
   var cookiesElement = 'cookiesMessage';
   var cookiesBtn = 'cookiesAccept';
-  var disturbElements = []; // -----------------------
+  var disturbElements = ["upButton"]; // -----------------------
   // End config
 
   cookies = document.getElementById(cookiesElement);
