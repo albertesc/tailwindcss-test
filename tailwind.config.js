@@ -103,7 +103,7 @@ module.exports = {
         width: ['responsive', 'group-active'],
         height: ['responsive', 'group-active'],
         display: ['responsive', 'group-active'],
-        backgroundColor: ['responsive', 'hover', 'focus', 'group-active'],
+        backgroundColor: ['responsive', 'hover', 'focus', 'group-active', 'before'],
         scale: ['responsive', 'hover', 'focus', 'group-active'],
         translate: ['responsive', 'hover', 'focus', 'group-active'],
     },
@@ -115,6 +115,7 @@ module.exports = {
         }),
         require("./plugins/classHeaderFixed")(),
         require("./plugins/classActive")(),
+        require("./plugins/variantBefore")(),
     ],
     purge: [
         './public/**/*.html',
