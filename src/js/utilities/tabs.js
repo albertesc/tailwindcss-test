@@ -21,8 +21,8 @@
         */
 
     let selectorTab = '.tab';
-    let selectorContent = '.tab-content';
-    let selectorTabSelect = '.tab-select';
+    let selectorContent = '.tabsContent';
+    let selectorTabSelect = '.tabs__select';
     let activeClass = 'active';
     // -----------------------
     // End config

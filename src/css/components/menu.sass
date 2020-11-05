@@ -1,32 +1,23 @@
-/*  IMPORTANTE: Para usar este componente hay que configurar el archivo tailwind.config.js con
-	la siguiente configuración:
-
-		// tailwind.config.js
-		module.exports = {
-			theme: {
-				extend: {
-					inset: {
-		+				'-full': '-100%',
-					}
-				}
-			}
-		}
+/*  Menu
 	*/
 
 .menu
-	@apply z-50 fixed w-full bg-gray-900 transition-all duration-200 ease-in-out
+	@apply z-50 fixed md:left-0 md:relative w-full md:w-auto md:max-w-full bg-gray-900 md:bg-transparent transition-all duration-200 ease-in-out
 
-	.menu__list
-		@apply list-none p-0 m-0
+	&__list
+		@apply md:flex list-none p-0 m-0
 
-	.menu__item  a
+	&__item  a
 		@apply block whitespace-no-wrap
 
-	.menu__item .dropdown__menu
-		@apply overflow-hidden max-h-0 transition-all duration-500 ease-in-out
+	&__item .dropdown__menu
+		@apply overflow-hidden md:overflow-auto max-h-0 md:max-h-screen transition-all duration-500 ease-in-out
 
-		&.open
-			@apply max-h-0 max-h-screen
+	&__item .dropdown__menu.open
+		@apply max-h-0 max-h-screen
+
+	&__close
+		@apply md:hidden
 
 .menu-left
 	@apply inset-y-0 -left-full
@@ -40,18 +31,5 @@
 	&.open
 		@apply right-0
 
-@screen md
-	.menu
-		@apply relative w-auto max-w-full bg-transparent left-0
-
-		.menu__list
-			@apply flex
-
-		.menu__item .dropdown__menu
-			@apply overflow-auto max-h-screen
-
-		.menu__close
-			@apply hidden
-
-	.menu__icon
-		@apply hidden
+.menu__icon
+	@apply md:hidden

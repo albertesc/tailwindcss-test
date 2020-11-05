@@ -18,25 +18,13 @@ h1, h2, h3, h4
 	@apply font-heading
 
 h1
-	@apply text-4xl mb-8 leading-tight
-
-@screen sm
-	h1
-		@apply text-5xl
+	@apply text-4xl sm:text-5xl mb-8 leading-tight
 
 h2
-	@apply text-3xl my-4 leading-snug
-
-@screen sm
-	h2
-		@apply text-4xl
+	@apply text-3xl sm:text-4xl my-4 leading-snug
 
 h3
-	@apply text-xl mt-4 mb-2 leading-snug
-
-@screen sm
-	h3
-		@apply text-2xl
+	@apply text-xl sm:text-2xl mt-4 mb-2 leading-snug
 
 h4
 	@apply text-lg mt-3 mb-2 leading-normal
@@ -72,10 +60,13 @@ ul
 	li
 		@apply relative mb-3 pl-8 text-base leading-7
 
-		&:before
-			@apply content absolute block top-0 left-0 w-5 h-7 bg-no-repeat bg-center
-			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%234b5563' viewBox='0 0 20 20'%3E%3Cpath fill-rule='evenodd' d='M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z' clip-rule='evenodd'%3E%3C/path%3E%3C/svg%3E")
-			// Poner aquí ☝️ el icono del listado en formato svg. Puedes crear la url en la página https://yoksel.github.io/url-encoder/
+	li:before
+		@apply content absolute block top-0 left-0 w-5 h-7 bg-no-repeat bg-center
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%234b5563' viewBox='0 0 20 20'%3E%3Cpath fill-rule='evenodd' d='M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z' clip-rule='evenodd'%3E%3C/path%3E%3C/svg%3E")
+		// Poner aquí ☝️ el icono del listado en formato svg. Puedes crear la url en la página https://yoksel.github.io/url-encoder/
+
+	&.list-none li:before
+		@apply hidden
 
 ol
 	@apply list-none my-3 p-0
@@ -85,19 +76,15 @@ ol
 		@apply flex items-baseline relative mb-3 pl-0 text-base leading-7
 		counter-increment: counter
 
-		&:before
-			content: counter(counter) "."
-			@apply flex flex-shrink-0 justify-center items-center w-4 h-6 mr-3
+	li:before
+		content: counter(counter) "."
+		@apply flex flex-shrink-0 justify-center items-center w-4 h-6 mr-3
 
 ul ul,
 ol ol,
 ul ol,
 ol ul
 	@apply my-0
-
-ul.list-none li
-	&:before
-		@apply hidden
 
 
 /*  Forms styles
@@ -186,32 +173,6 @@ table
 
 	td
 		@apply text-left font-normal px-5 py-3
-
-
-/*  Buttons
-	*/
-
-.button-primary
-	@apply inline-block px-5 py-3 bg-primary-500 text-white uppercase rounded cursor-pointer
-
-	&:hover
-		@apply bg-primary-600 text-white
-
-.button-ghost
-	@apply inline-block px-5 py-3 border border-primary-500 text-primary-500 uppercase rounded cursor-pointer
-
-	&:hover
-		@apply bg-primary-500 text-white
-
-	&--white
-		@extend .button-ghost
-		@apply border-white text-white
-
-		&:hover
-			@apply bg-white text-gray-900
-
-.button-sm
-	@apply px-3 py-2 text-sm
 
 
 /*  Icons

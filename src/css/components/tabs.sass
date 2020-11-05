@@ -1,17 +1,23 @@
+/*  Tabs
+	*/
+
 .tabs
-    .tabs-menu
-        @apply hidden
+	&__menu
+		@apply hidden
 
-        &.active
-            @apply flex
-    
-.tab-content
-    @apply hidden
+	&__menu.active
+		@apply flex
+	
+.tabsContent
+	@apply hidden
 
-    &.active
-        @apply block
-    
+.tabsContent.active
+	@apply block
+	
 @screen md
-    .tabs
-        .tabs-menu
-            @apply flex
+	.tabs
+		&__menu
+			@apply flex
+
+		.tab.active
+			@apply  border-b-4 border-primary-500 border-solid

@@ -1,0 +1,24 @@
+/*  Buttons
+	*/
+
+.button-primary
+	@apply inline-block px-5 py-3 bg-primary-500 text-white uppercase rounded cursor-pointer
+
+	&:hover
+		@apply bg-primary-600 text-white
+
+.button-ghost
+	@apply inline-block px-5 py-3 border border-primary-500 text-primary-500 uppercase rounded cursor-pointer
+
+	&:hover
+		@apply bg-primary-500 text-white
+
+	&--white
+		@extend .button-ghost
+		@apply border-white text-white
+
+	&--white:hover
+		@apply bg-white text-gray-900
+
+.button-sm
+	@apply px-3 py-2 text-sm

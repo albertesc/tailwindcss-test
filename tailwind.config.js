@@ -62,4 +62,7 @@ module.exports = {
         './public/**/*.html',
         './src/**/*.js'
     ],
+    experimental: {
+        applyComplexClasses: true,
+    },
 };

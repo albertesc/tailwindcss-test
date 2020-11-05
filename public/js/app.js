@@ -4408,8 +4408,8 @@ var rangeSlider = function rangeSlider(id) {
       */
 
   var selectorTab = '.tab';
-  var selectorContent = '.tab-content';
-  var selectorTabSelect = '.tab-select';
+  var selectorContent = '.tabsContent';
+  var selectorTabSelect = '.tabs__select';
   var activeClass = 'active'; // -----------------------
   // End config
 
