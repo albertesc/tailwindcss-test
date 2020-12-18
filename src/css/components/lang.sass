@@ -1,0 +1,34 @@
+/** Lang
+	*/
+
+.lang
+	@apply relative flex items-center
+
+	&__menu
+		@apply flex items-center
+
+	&__link
+		@apply mr-3 text-white uppercase no-underline
+
+	&__icon
+		@apply hidden ml-2
+
+
+	@screen md
+		&__menu
+			@apply hidden absolute block top-full left-0 hidden left-1/2 transform -translate-x-1/2
+
+		&:hover &__menu
+			@apply block
+
+		&__link
+			@apply block m-0 px-3 py-2 bg-primary-500 text-white whitespace-no-wrap
+
+		&__link.lang__link--current
+			@apply bg-transparent text-gray-900
+
+		&__link.lang__link--current:hover
+			@apply bg-transparent text-gray-900
+
+		&__link:hover
+			@apply bg-primary-600 text-white

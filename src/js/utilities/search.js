@@ -1,13 +1,12 @@
 ; (function (window, undefined) {
     'strict mode';
 
-    let buttonSelector = 'searchButton';
-    let formSelector = 'headerSearch';
+    const buttonSelector = 'searchButton';
+    const formSelector = 'headerSearch';
 
-    let searchButton = document.getElementById(buttonSelector);
+    const searchButton = document.getElementById(buttonSelector);
 
     searchButton.addEventListener('click', () => {
         document.getElementById(formSelector).classList.toggle('active');
     });
-
 })(window);

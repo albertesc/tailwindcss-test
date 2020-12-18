@@ -1,22 +1,21 @@
 ; (function (window, undefined) {
     'strict mode';
 
-    // Config
-    // -----------------------
-    /*  Coloca en la variable selector, el id (sin #) del elemento correspondientes de tu html ej:
-        <span class="" id="upButton">Contacto</span>
+    /** CONFIG
+     * Coloca en la variable selector, el id (sin #) del elemento correspondientes de tu html.
+     * 
+     * Example:
+     * <span class="" id="upButton">Contacto</span>
+     * 
+     * Puedes seleccionar la duración de la animación en milisegundos en la variable duration.
+     * Puedes hacer que en el top de la página, el botón desaparezca colocando un true en la variable disableOnTop.
+     */
 
-        Puedes seleccionar la duración de la animación en milisegundos en la variable duration.
-        Puedes hacer que en el top de la página, el botón desaparezca colocando un true en la variable disableOnTop.
-        */
+    const selector = 'upButton';
+    const duration = 1000;
+    const disableOnTop = true;
 
-    let selector = 'upButton';
-    let duration = 1000;
-    let disableOnTop = true;
-    // -----------------------
-    // End config
-
-    elem = document.getElementById(selector);
+    const elem = document.getElementById(selector);
 
     if (disableOnTop) {
         window.addEventListener('scroll', () => {

@@ -1,5 +1,5 @@
 
-/*  PENDIENTE DE REFACTORIZAR
+/** PENDIENTE DE REFACTORIZAR
     */
 
 ; (function (window, undefined) {

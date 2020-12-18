@@ -1,23 +1,55 @@
-/*  Tabs
+/** Tabs
+	Example:
+	
+	<div class="tabs">
+		<div class="tabs__menu">
+			<span class="tab" data-tab="tab1">Tab 1</span>
+			<span class="tab" data-tab="tab2">Tab 2</span>
+		</div>
+
+		<div class="tabs__content">
+			<div id="tab1">...</div>
+			<div id="tab2">...</div>
+		</div>
+	</div>
 	*/
 
 .tabs
+	@apply relative
+
+	// .tabs__menu
 	&__menu
-		@apply hidden
+		@apply hidden absolute flex-col space-y-1 w-full p-5 mt-2 bg-white rounded-md shadow-md
 
 	&__menu.active
 		@apply flex
 	
-.tabsContent
-	@apply hidden
+	&__menu .tab
+		@apply px-6 py-3
 
-.tabsContent.active
-	@apply block
+
+	// .tabs__content
+	&__content
+		@apply hidden mt-4 p-5
+
+	&__content.active
+		@apply block
+
+
+	// .tabs__select
+	&__select
+		@apply relative px-5 py-3 bg-white border border-solid border-gray-300 rounded-md
+
 	
-@screen md
-	.tabs
+	@screen md
 		&__menu
-			@apply flex
+			@apply relative flex flex-row space-y-0 p-0 mt-0 bg-transparent shadow-none
+
+		&__content
+			@apply mt-0
+
+		&__select
+			@apply hidden
 
 		.tab.active
-			@apply  border-b-4 border-primary-500 border-solid
+			@apply border-t border-l border-r border-gray-400 border-solid bg-gray-200

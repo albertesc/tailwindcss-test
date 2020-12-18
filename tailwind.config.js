@@ -12,7 +12,7 @@ const customColors = {
         700: '#0c68b4',
         800: '#0054a0',
         900: '#00408c'
-    },
+    }
 };
 
 module.exports = {
@@ -33,6 +33,9 @@ module.exports = {
             },
             backgroundColor: {
                 ...customColors
+            },
+            inset: {
+                "-full": "-100%"
             }
         },
     },

@@ -1,28 +1,26 @@
 ; (function (window, undefined) {
     'strict mode';
 
-    // Config
-    // -----------------------
-    /*  Coloca las id's (sin #) de los elementos correspondientes de tu html
+    /** CONFIG
+     * 
+     * Coloca las id's (sin #) de los elementos correspondientes de tu html
+     * Ha estos dos elementos se les aplicará la clase "open" para el cambio de estado que puedes
+     * modificar con tu css.
+     * 
+     * IMPORTANTE: Hay que aplicar el atributo data-toggle en estos dos elementos con el valor
+     * de la id (sin #) del elemento que se quiere modificar ej:
+     * 
+     * Example:
+     * <a href="#" data-toggle="menu" id="menuOpen" class="" title="...">Abrir</a>
+     * <a href="#" data-toggle="menu" id="menuClose" class="" title="...">Cerrar</a>
+     * <div id="menu">...</div>
+     */
 
-        Ha estos dos elementos se les aplicará la clase "open" para el cambio de estado que puedes
-        modificar con tu css.
+    const openSelector = '#menuOpen';
+    const closeSelector = '#menuClose';
 
-        IMPORTANTE: Hay que aplicar el atributo data-toggle en estos dos elementos con el valor
-        de la id (sin #) del elemento que se quiere modificar ej:
-
-        buttonOpen  -> <a href="#" data-toggle="menu" id="menuOpen" class="" title="...">Abrir</a>
-        buttonClose -> <a href="#" data-toggle="menu" id="menuClose" class="" title="...">Cerrar</a>
-        menu        -> <div id="menu">...</div>
-        */
-
-    let buttonOpen = 'menuOpen';
-    let buttonClose = 'menuClose';
-    // -----------------------
-    // End config
-
-    let open = document.getElementById(buttonOpen);
-    let close = document.getElementById(buttonClose);
+    const open = document.querySelector(openSelector);
+    const close = document.querySelector(closeSelector);
 
     open.addEventListener('click', event => {
         event.preventDefault();

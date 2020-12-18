@@ -1,6 +1,5 @@
-/*  Tailwind base styles
+/** Tailwind base styles 
 	*/
-
 html
 	@apply antialiased text-base
 
@@ -11,20 +10,29 @@ footer
 	@apply bg-gray-200
 
 
-/*  Text styles
-	*/
 
+/** Text styles 
+	*/
 h1, h2, h3, h4
 	@apply font-heading
 
 h1
-	@apply text-4xl sm:text-5xl mb-8 leading-tight
+	@apply text-4xl mb-8 leading-tight
+
+	@screen sm
+		@apply text-5xl
 
 h2
-	@apply text-3xl sm:text-4xl my-4 leading-snug
+	@apply text-3xl my-4 leading-snug
+
+	@screen sm
+		@apply text-4xl
 
 h3
-	@apply text-xl sm:text-2xl mt-4 mb-2 leading-snug
+	@apply text-xl mt-4 mb-2 leading-snug
+
+	@screen sm
+		@apply text-2xl
 
 h4
 	@apply text-lg mt-3 mb-2 leading-normal
@@ -37,6 +45,7 @@ a
 
 	&:hover
 		@apply text-primary-700
+
 
 small
 	@apply text-xs inline-block
@@ -51,47 +60,51 @@ blockquote
 	@apply text-lg font-bold mb-3
 
 
-/*  List Styles
-	*/
 
+/** List Styles
+	*/
 ul
 	@apply list-none my-3 p-0
 
+	ul, ol
+		@apply my-0
+
 	li
-		@apply relative mb-3 pl-8 text-base leading-7
+		@apply relative mb-1 pl-8 text-base leading-7
 
 	li:before
 		@apply content absolute block top-0 left-0 w-5 h-7 bg-no-repeat bg-center
 		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%234b5563' viewBox='0 0 20 20'%3E%3Cpath fill-rule='evenodd' d='M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z' clip-rule='evenodd'%3E%3C/path%3E%3C/svg%3E")
-		// Poner aquí ☝️ el icono del listado en formato svg. Puedes crear la url en la página https://yoksel.github.io/url-encoder/
+		/* Poner aquí ☝️ el icono del listado en formato svg. Puedes crear la url en la página https://yoksel.github.io/url-encoder */
+	
+	&.list-none li
+		@apply pl-0
 
 	&.list-none li:before
 		@apply hidden
+
 
 ol
 	@apply list-none my-3 p-0
 	counter-reset: counter
 
 	li
-		@apply flex items-baseline relative mb-3 pl-0 text-base leading-7
+		@apply flex items-baseline relative mb-1 pl-0 text-base leading-7
 		counter-increment: counter
 
 	li:before
 		content: counter(counter) "."
 		@apply flex flex-shrink-0 justify-center items-center w-4 h-6 mr-3
 
-ul ul,
-ol ol,
-ul ol,
-ol ul
-	@apply my-0
+	ol, ul
+		@apply my-0
 
 
-/*  Forms styles
+
+/** Forms styles
 	*/
 
 // input
-// -----------------------
 input,
 textarea,
 select
@@ -127,6 +140,7 @@ input[type="radio"]:checked
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 15 15' overflow='visible'%3E%3Ccircle cx='7.5' cy='7.5' r='7.5' fill='%230071b9'/%3E%3Cpath fill='%23fff' d='M6.4 11.7L3 8.9l1-1.1 2.2 1.8 4.7-5.7 1.2.9z'/%3E%3C/svg%3E")
 	// Poner aquí ☝️ el icono del input radio en formato svg. Puedes crear la url en la página https://yoksel.github.io/url-encoder/
 
+	
 // input errors
 input.error,
 textarea.error,
@@ -143,27 +157,24 @@ textarea.error:focus::placeholder,
 select.error:focus::placeholder
 	@apply text-red-300
 
+
 // select
-// -----------------------
 select
 	@apply appearance-none bg-no-repeat bg-right
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 24' fill='%23BBBBBB' width='30' height='24'%3E%3Cpath class='heroicon-ui' d='M15.3 9.3a1 1 0 0 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 1.4-1.4l3.3 3.29 3.3-3.3z'/%3E%3C/svg%3E%0A")
 	// Poner aquí ☝️ el icono del input tipo select en formato svg. Puedes crear la url en la página https://yoksel.github.io/url-encoder/
 
+
 // label
-// -----------------------
 label
 	@apply block text-gray-600 text-xs font-medium uppercase leading-relaxed
 
 
-/*  Table styles
+
+/** Table styles 
 	*/
-		
 table
 	@apply w-full
-
-	tr:first-child
-		@apply bg-gray-300
 
 	th
 		@apply text-left font-bold text-gray-600 px-5 py-3
@@ -171,12 +182,15 @@ table
 	tr
 		@apply border-b border-solid border-gray-300
 
+	tr:first-child
+		@apply bg-gray-300
+
 	td
 		@apply text-left font-normal px-5 py-3
 
+		
 
-/*  Icons
+/** Icons
 	*/
-
 .icon
 	stroke-width: 1px

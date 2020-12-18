@@ -1,26 +1,26 @@
 ; (function (window, undefined) {
     'strict mode';
 
-    // Config
-    // -----------------------
-    /*  Coloca las id's (sin #) de los elementos correspondientes de tu html ej:
-        <div id="cookiesMessage">...<span id="cookiesAccept" class="">Acceptar</span></div>
+    /** CONFIG
+     * 
+     * Coloca las id's (sin #) de los elementos correspondientes de tu html.
+     * 
+     * Example:
+     * <div id="cookiesMessage">...<span id="cookiesAccept" class="">Acceptar</span></div>
+     * 
+     * Coloca las id's de los elementos que quedan solapados con las cookies en la variable disturbElements ej:
+     * let disturbElements = ['upButton', 'element1', '...'];
+     */
 
-        Coloca las id's de los elementos que quedan solapados con las cookies en la variable disturbElements ej:
-        let disturbElements = ['upButton', 'element1', '...'];
-        */
+    const cookiesElement = 'cookiesMessage';
+    const cookiesBtn = 'cookiesAccept';
+    const disturbElements = [];
 
-    let cookiesElement = 'cookiesMessage';
-    let cookiesBtn = 'cookiesAccept';
-    let disturbElements = ["upButton"];
-    // -----------------------
-    // End config
-
-    cookies = document.getElementById(cookiesElement);
+    const cookies = document.getElementById(cookiesElement);
 
     if (cookies) {
-        let btn = document.getElementById(cookiesBtn);
-        let cookiesHeight = cookies.offsetHeight; 
+        const btn = document.getElementById(cookiesBtn);
+        const cookiesHeight = cookies.offsetHeight; 
 
         btn.addEventListener('click', function () {
             cookies.remove();

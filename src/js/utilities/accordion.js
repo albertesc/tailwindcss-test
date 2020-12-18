@@ -1,25 +1,23 @@
 ; (function (window, undefined) {
     'strict mode';
 
-    // Config
-    // -----------------------
-    /*  Coloca en la variable selector, la clase (con el . delante) de los bottones de accordion correspondientes de tu html ej:
+    /** 
+     * CONFIG
+     * 
+     * Coloca en la variable selector, la clase (con el . delante) de los bottones de accordion correspondientes de tu html ej:
+     * <div class="accordion__button ">Button</div>
+     * <div class="accordion__content ">Lorem ...</div>
+     */
 
-        <div class="accordion__button ">Button</div>
-        <div class="accordion__content ">Lorem ...</div>
-        */
+    const selector = '.accordion__button';
 
-    let buttonSelector = '.accordion__button';
-    // -----------------------
-    // End config
-
-    let accordionButtons = document.querySelectorAll(buttonSelector);
+    const accordionButtons = document.querySelectorAll(selector);
 
     accordionButtons.forEach(button => {
         button.addEventListener("click", event => {
             event.preventDefault();
 
-            button.classList.toggle("active");
+            button.classList.toggle("accordion__button--active");
             let content = button.nextElementSibling;
 
             if (content.style.maxHeight) {

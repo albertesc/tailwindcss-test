@@ -1,23 +1,24 @@
 ; (function (window, undefined) {
     "strict mode";
 
-    // Config
-    // -----------------------
-    /*  Coloca las classes (con .) de los elementos correspondientes de tu html ej:
-        <label class="..."">
-            <input type="file" class="hidden file" />
-            <span class="file__name">Select a file</span>
-        </label>
+    /** CONFIG
+     * 
+     * Coloca las classes (con .) de los elementos correspondientes de tu html
+     * 
+     * Example:
+     * <label class="..."">
+     *      <input type="file" class="hidden file" />
+     *      <span class="file__name">Select a file</span>
+     * </label>
+     * 
+     * IMPORTANTE
+     * El input i el nombre deben estar enmarcados con un label.
+     */
 
-        IMPORTANTE! El input i el nombre deben estar enmarcados con un label.
-        */
+    const inputs = ".file";
+    const name = ".file__name";
 
-    let inputs = ".file";
-    let name = ".file__name";
-    // -----------------------
-    // End config
-
-    let fileInputs = document.querySelectorAll(inputs);
+    const fileInputs = document.querySelectorAll(inputs);
 
     fileInputs.forEach(file => {
         file.addEventListener("change", () => {
