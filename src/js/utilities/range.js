@@ -1,204 +1,223 @@
 const rangeSlider = function (id) {
-    var self = this;
-    var startX = 0, x = 0;
+	var self = this;
+	var startX = 0,
+		x = 0;
 
-    // retrieve touch button
-    var slider = document.getElementById(id)
-    var touchLeft = slider.querySelector('.slider-touch-left');
-    var touchRight = slider.querySelector('.slider-touch-right');
-    var lineSpan = slider.querySelector('.slider-line span');
+	// retrieve touch button
+	var slider = document.getElementById(id);
+	var touchLeft = slider.querySelector(".slider-touch-left");
+	var touchRight = slider.querySelector(".slider-touch-right");
+	var lineSpan = slider.querySelector(".slider-line span");
 
-    // get some properties
-    var min = parseFloat(slider.getAttribute('rs-min'));
-    var max = parseFloat(slider.getAttribute('rs-max'));
+	// get some properties
+	var min = parseFloat(slider.getAttribute("rs-min"));
+	var max = parseFloat(slider.getAttribute("rs-max"));
 
-    // retrieve default values
-    var defaultMinValue = min;
-    if (slider.hasAttribute('rs-min-value')) {
-        defaultMinValue = parseFloat(slider.getAttribute('rs-min-value'));
-    }
-    var defaultMaxValue = max;
+	// retrieve default values
+	var defaultMinValue = min;
+	if (slider.hasAttribute("rs-min-value")) {
+		defaultMinValue = parseFloat(slider.getAttribute("rs-min-value"));
+	}
+	var defaultMaxValue = max;
 
-    if (slider.hasAttribute('rs-max-value')) {
-        defaultMaxValue = parseFloat(slider.getAttribute('rs-max-value'));
-    }
+	if (slider.hasAttribute("rs-max-value")) {
+		defaultMaxValue = parseFloat(slider.getAttribute("rs-max-value"));
+	}
 
-    // check values are correct
-    if (defaultMinValue < min) {
-        defaultMinValue = min;
-    }
+	// check values are correct
+	if (defaultMinValue < min) {
+		defaultMinValue = min;
+	}
 
-    if (defaultMaxValue > max) {
-        defaultMaxValue = max;
-    }
+	if (defaultMaxValue > max) {
+		defaultMaxValue = max;
+	}
 
-    if (defaultMinValue > defaultMaxValue) {
-        defaultMinValue = defaultMaxValue;
-    }
+	if (defaultMinValue > defaultMaxValue) {
+		defaultMinValue = defaultMaxValue;
+	}
 
-    var step = 0.0;
+	var step = 0.0;
 
-    if (slider.getAttribute('rs-step')) {
-        step = Math.abs(parseFloat(slider.getAttribute('rs-step')));
-    }
+	if (slider.getAttribute("rs-step")) {
+		step = Math.abs(parseFloat(slider.getAttribute("rs-step")));
+	}
 
-    // normalize flag
-    var normalizeFact = 26;
+	// normalize flag
+	var normalizeFact = 26;
 
-    self.slider = slider;
-    self.reset = function () {
-        touchLeft.style.left = '0px';
-        touchRight.style.left = (slider.offsetWidth - touchLeft.offsetWidth) + 'px';
-        lineSpan.style.marginLeft = '0px';
-        lineSpan.style.width = (slider.offsetWidth - touchLeft.offsetWidth) + 'px';
-        startX = 0;
-        x = 0;
-    };
+	self.slider = slider;
+	self.reset = function () {
+		touchLeft.style.left = "0px";
+		touchRight.style.left = slider.offsetWidth - touchLeft.offsetWidth + "px";
+		lineSpan.style.marginLeft = "0px";
+		lineSpan.style.width = slider.offsetWidth - touchLeft.offsetWidth + "px";
+		startX = 0;
+		x = 0;
+	};
 
-    self.setMinValue = function (minValue) {
-        var ratio = ((minValue - min) / (max - min));
-        touchLeft.style.left = Math.ceil(ratio * (slider.offsetWidth - (touchLeft.offsetWidth + normalizeFact))) + 'px';
-        lineSpan.style.marginLeft = touchLeft.offsetLeft + 'px';
-        lineSpan.style.width = (touchRight.offsetLeft - touchLeft.offsetLeft) + 'px';
-        slider.setAttribute('rs-min-value', minValue);
-    }
+	self.setMinValue = function (minValue) {
+		var ratio = (minValue - min) / (max - min);
+		touchLeft.style.left =
+			Math.ceil(
+				ratio * (slider.offsetWidth - (touchLeft.offsetWidth + normalizeFact))
+			) + "px";
+		lineSpan.style.marginLeft = touchLeft.offsetLeft + "px";
+		lineSpan.style.width = touchRight.offsetLeft - touchLeft.offsetLeft + "px";
+		slider.setAttribute("rs-min-value", minValue);
+	};
 
-    self.setMaxValue = function (maxValue) {
-        var ratio = ((maxValue - min) / (max - min));
-        touchRight.style.left = Math.ceil(ratio * (slider.offsetWidth - (touchLeft.offsetWidth + normalizeFact)) + normalizeFact) + 'px';
-        lineSpan.style.marginLeft = touchLeft.offsetLeft + 'px';
-        lineSpan.style.width = (touchRight.offsetLeft - touchLeft.offsetLeft) + 'px';
-        slider.setAttribute('rs-max-value', maxValue);
-    }
+	self.setMaxValue = function (maxValue) {
+		var ratio = (maxValue - min) / (max - min);
+		touchRight.style.left =
+			Math.ceil(
+				ratio * (slider.offsetWidth - (touchLeft.offsetWidth + normalizeFact)) +
+					normalizeFact
+			) + "px";
+		lineSpan.style.marginLeft = touchLeft.offsetLeft + "px";
+		lineSpan.style.width = touchRight.offsetLeft - touchLeft.offsetLeft + "px";
+		slider.setAttribute("rs-max-value", maxValue);
+	};
 
-    // initial reset
-    self.reset();
+	// initial reset
+	self.reset();
 
-    // usefull values, min, max, normalize fact is the width of both touch buttons
-    var maxX = slider.offsetWidth - touchRight.offsetWidth;
-    var selectedTouch = null;
-    var initialValue = (lineSpan.offsetWidth - normalizeFact);
+	// usefull values, min, max, normalize fact is the width of both touch buttons
+	var maxX = slider.offsetWidth - touchRight.offsetWidth;
+	var selectedTouch = null;
+	var initialValue = lineSpan.offsetWidth - normalizeFact;
 
-    // set defualt values
-    self.setMinValue(defaultMinValue);
-    self.setMaxValue(defaultMaxValue);
+	// set defualt values
+	self.setMinValue(defaultMinValue);
+	self.setMaxValue(defaultMaxValue);
 
-    // setup touch/click events
-    function onStart(event) {
-        // Prevent default dragging of selected content
-        event.preventDefault();
-        var eventTouch = event;
+	// setup touch/click events
+	function onStart(event) {
+		// Prevent default dragging of selected content
+		event.preventDefault();
+		var eventTouch = event;
 
-        if (event.touches) {
-            eventTouch = event.touches[0];
-        }
+		if (event.touches) {
+			eventTouch = event.touches[0];
+		}
 
-        if (this === touchLeft) {
-            x = touchLeft.offsetLeft;
-        } else {
-            x = touchRight.offsetLeft;
-        }
+		if (this === touchLeft) {
+			x = touchLeft.offsetLeft;
+		} else {
+			x = touchRight.offsetLeft;
+		}
 
-        startX = eventTouch.pageX - x;
-        selectedTouch = this;
-        document.addEventListener('mousemove', onMove);
-        document.addEventListener('mouseup', onStop);
-        document.addEventListener('touchmove', onMove);
-        document.addEventListener('touchend', onStop);
-    }
+		startX = eventTouch.pageX - x;
+		selectedTouch = this;
+		document.addEventListener("mousemove", onMove);
+		document.addEventListener("mouseup", onStop);
+		document.addEventListener("touchmove", onMove);
+		document.addEventListener("touchend", onStop);
+	}
 
-    function onMove(event) {
-        var eventTouch = event;
+	function onMove(event) {
+		var eventTouch = event;
 
-        if (event.touches) {
-            eventTouch = event.touches[0];
-        }
+		if (event.touches) {
+			eventTouch = event.touches[0];
+		}
 
-        x = eventTouch.pageX - startX;
+		x = eventTouch.pageX - startX;
 
-        if (selectedTouch === touchLeft) {
-            if (x > (touchRight.offsetLeft - selectedTouch.offsetWidth + 10)) {
-                x = (touchRight.offsetLeft - selectedTouch.offsetWidth + 10)
-            } else if (x < 0) {
-                x = 0;
-            }
-            selectedTouch.style.left = x + 'px';
-        }
-        else if (selectedTouch === touchRight) {
-            if (x < (touchLeft.offsetLeft + touchLeft.offsetWidth - 10)) {
-                x = (touchLeft.offsetLeft + touchLeft.offsetWidth - 10)
-            } else if (x > maxX) {
-                x = maxX;
-            }
-            selectedTouch.style.left = x + 'px';
-        }
+		if (selectedTouch === touchLeft) {
+			if (x > touchRight.offsetLeft - selectedTouch.offsetWidth + 10) {
+				x = touchRight.offsetLeft - selectedTouch.offsetWidth + 10;
+			} else if (x < 0) {
+				x = 0;
+			}
+			selectedTouch.style.left = x + "px";
+		} else if (selectedTouch === touchRight) {
+			if (x < touchLeft.offsetLeft + touchLeft.offsetWidth - 10) {
+				x = touchLeft.offsetLeft + touchLeft.offsetWidth - 10;
+			} else if (x > maxX) {
+				x = maxX;
+			}
+			selectedTouch.style.left = x + "px";
+		}
 
-        // update line span
-        lineSpan.style.marginLeft = touchLeft.offsetLeft + 'px';
-        lineSpan.style.width = (touchRight.offsetLeft - touchLeft.offsetLeft) + 'px';
+		// update line span
+		lineSpan.style.marginLeft = touchLeft.offsetLeft + "px";
+		lineSpan.style.width = touchRight.offsetLeft - touchLeft.offsetLeft + "px";
 
-        // write new value
-        calculateValue();
+		// write new value
+		calculateValue();
 
-        // call on change
-        if (slider.getAttribute('on-change')) {
-            var fn = new Function('min, max', slider.getAttribute('on-change'));
-            fn(slider.getAttribute('rs-min-value'), slider.getAttribute('rs-max-value'));
-        }
+		// call on change
+		if (slider.getAttribute("on-change")) {
+			var fn = new Function("min, max", slider.getAttribute("on-change"));
+			fn(
+				slider.getAttribute("rs-min-value"),
+				slider.getAttribute("rs-max-value")
+			);
+		}
 
-        if (self.onChange) {
-            self.onChange(slider.getAttribute('rs-min-value'), slider.getAttribute('rs-max-value'));
-        }
-    }
+		if (self.onChange) {
+			self.onChange(
+				slider.getAttribute("rs-min-value"),
+				slider.getAttribute("rs-max-value")
+			);
+		}
+	}
 
-    function onStop(event) {
-        document.removeEventListener('mousemove', onMove);
-        document.removeEventListener('mouseup', onStop);
-        document.removeEventListener('touchmove', onMove);
-        document.removeEventListener('touchend', onStop);
+	function onStop(event) {
+		document.removeEventListener("mousemove", onMove);
+		document.removeEventListener("mouseup", onStop);
+		document.removeEventListener("touchmove", onMove);
+		document.removeEventListener("touchend", onStop);
 
-        selectedTouch = null;
+		selectedTouch = null;
 
-        // write new value
-        calculateValue();
+		// write new value
+		calculateValue();
 
-        // call did changed
-        if (slider.getAttribute('did-changed')) {
-            var fn = new Function('min, max', slider.getAttribute('did-changed'));
-            fn(slider.getAttribute('rs-min-value'), slider.getAttribute('rs-max-value'));
-        }
+		// call did changed
+		if (slider.getAttribute("did-changed")) {
+			var fn = new Function("min, max", slider.getAttribute("did-changed"));
+			fn(
+				slider.getAttribute("rs-min-value"),
+				slider.getAttribute("rs-max-value")
+			);
+		}
 
-        if (self.didChanged) {
-            self.didChanged(slider.getAttribute('rs-min-value'), slider.getAttribute('rs-max-value'));
-        }
-    }
+		if (self.didChanged) {
+			self.didChanged(
+				slider.getAttribute("rs-min-value"),
+				slider.getAttribute("rs-max-value")
+			);
+		}
+	}
 
-    function calculateValue() {
-        var newValue = (lineSpan.offsetWidth - normalizeFact) / initialValue;
-        var minValue = lineSpan.offsetLeft / initialValue;
-        var maxValue = minValue + newValue;
+	function calculateValue() {
+		var newValue = (lineSpan.offsetWidth - normalizeFact) / initialValue;
+		var minValue = lineSpan.offsetLeft / initialValue;
+		var maxValue = minValue + newValue;
 
-        var minValue = minValue * (max - min) + min;
-        var maxValue = maxValue * (max - min) + min;
+		var minValue = minValue * (max - min) + min;
+		var maxValue = maxValue * (max - min) + min;
 
-        console.log(step);
-        if (step !== 0.0) {
-            var multi = Math.floor((minValue / step));
-            minValue = step * multi;
+		console.log(step);
+		if (step !== 0.0) {
+			var multi = Math.floor(minValue / step);
+			minValue = step * multi;
 
-            multi = Math.floor((maxValue / step));
-            maxValue = step * multi;
-        }
+			multi = Math.floor(maxValue / step);
+			maxValue = step * multi;
+		}
 
-        slider.setAttribute('rs-min-value', minValue);
-        slider.setAttribute('rs-max-value', maxValue);
-    }
+		slider.setAttribute("rs-min-value", minValue);
+		slider.setAttribute("rs-max-value", maxValue);
+	}
 
-    // link events
-    touchLeft.addEventListener('mousedown', onStart);
-    touchRight.addEventListener('mousedown', onStart);
-    touchLeft.addEventListener('touchstart', onStart);
-    touchRight.addEventListener('touchstart', onStart);
+	// link events
+	touchLeft.addEventListener("mousedown", onStart);
+	touchRight.addEventListener("mousedown", onStart);
+	touchLeft.addEventListener("touchstart", onStart);
+	touchRight.addEventListener("touchstart", onStart);
 };
 
 export default rangeSlider;
